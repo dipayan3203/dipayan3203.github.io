@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dipayan Mahato | Python Developer & Applied AI Engineer</title>
+  <meta name="description" content="Portfolio of Dipayan Mahato - Python Developer & Applied AI Engineer specializing in LangChain RAG pipelines, FastAPI microservices, and AWS cloud solutions.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Glow Effects -->
+  <div class="bg-glow"></div>
+  <div class="bg-glow-right"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">&lt;<span>DM</span> /&gt;</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#stack" class="nav-link">Stack</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#contact" class="btn-contact btn-contact-mobile">Let's Connect</a></li>
+      </ul>
+      <a href="#contact" class="btn-contact">Let's Connect</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="hero" class="scroll-fade">
+    <div class="hero-wrapper">
+      <div class="hero-content">
+        <span class="hero-subtitle">// WELCOME TO MY PORTFOLIO</span>
+        <h1 class="hero-title text-gradient">Dipayan Mahato</h1>
+        
+        <div class="hero-typing-container">
+          <span class="hero-typing" id="typing-text"></span><span class="cursor"></span>
+        </div>
+
+        <div class="hero-stats">
+          <span class="glow-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            10K+ Daily API Requests
+          </span>
+          <span class="glow-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            99.9% Uptime
+          </span>
+          <span class="glow-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            30% Efficiency Gains
+          </span>
+        </div>
+
+        <p class="contact-desc" style="max-width: 600px; color: var(--text-secondary);">
+          I architect production-ready backends and engineer applied AI solutions that automate work and scale efficiently.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-primary">
+            View Projects 
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <!-- Triggers print-mode stylesheet for direct resume saving -->
+          <a href="javascript:window.print()" class="btn-secondary">
+            Download Resume
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://linkedin.com/in/dipayan-mahato-5a1551262" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:dipayanmahato9733@gmail.com" class="social-icon" aria-label="Email">
+            <svg viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l12-9.725v15.438h-24v-15.438l12 9.725z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Animated Interactive Visual -->
+      <div class="hero-visual">
+        <div class="tech-illustration">
+          <div class="orb-center"></div>
+          <div class="illustration-ring ring-1">
+            <div class="node node-1"></div>
+            <div class="node node-2"></div>
+          </div>
+          <div class="illustration-ring ring-2">
+            <div class="node node-3"></div>
+            <div class="node node-4"></div>
+          </div>
+          <div class="illustration-ring ring-3">
+            <div class="node node-5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="scroll-fade">
+    <h2 class="section-title text-gradient">About Me</h2>
+    
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <div class="terminal-buttons">
+          <span class="terminal-btn terminal-close"></span>
+          <span class="terminal-btn terminal-minimize"></span>
+          <span class="terminal-btn terminal-expand"></span>
+        </div>
+        <div class="terminal-title">dipayan@nit-durgapur: ~/about</div>
+        <div style="width: 52px;"></div> <!-- Spacer -->
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-line">
+          <span class="terminal-cmd">cat about.txt</span>
+          <div class="terminal-output" style="color: #E6EDF3; line-height: 1.7; margin-bottom: 16px;">
+            "I started studying how metals resist corrosion. Now I build systems that resist failure. From NIT Durgapur to production-grade FastAPI backends and LangChain RAG pipelines — I found my edge where backend engineering meets applied AI, and I've been building there ever since."
+          </div>
+        </div>
+
+        <div class="terminal-line">
+          <span class="terminal-cmd">python3 -m dipayan.links</span>
+          <div class="terminal-output" style="margin-bottom: 16px;">
+            <div style="display: flex; flex-direction: column; gap: 8px; font-family: var(--font-mono); font-size: 0.9rem;">
+              <div>
+                <span style="color: var(--accent);">GitHub:</span> 
+                <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" style="color: #58A6FF; text-decoration: underline;">github.com/dipayan3203</a>
+              </div>
+              <div>
+                <span style="color: var(--accent);">LinkedIn:</span> 
+                <a href="https://linkedin.com/in/dipayan-mahato-5a1551262" target="_blank" rel="noopener noreferrer" style="color: #58A6FF; text-decoration: underline;">linkedin.com/in/dipayan-mahato-5a1551262</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="terminal-line" id="terminal-loading-line">
+          <span class="terminal-cmd">python3 -c "import sys; print('Status: Active & Building')"</span>
+          <div class="terminal-output" id="terminal-loading-output" style="color: var(--accent);">
+            Loading system metrics... [OK]
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section id="stack" class="scroll-fade">
+    <h2 class="section-title text-gradient">Tech Stack</h2>
+    
+    <div class="stack-grid">
+      <!-- Languages -->
+      <div class="stack-category glow-card">
+        <div class="category-title-wrapper">
+          <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.25A3.25 3.25 0 0 0 13.5 13.25v1.5c0 .966.784 1.75 1.75 1.75H18M6 10h1.25A3.25 3.25 0 0 1 10.5 13.25v1.5c0 .966-.784 1.75-1.75 1.75H6M12 2v20"/></svg>
+          <h3 class="category-title">Languages</h3>
+        </div>
+        <div class="badge-grid">
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24"><path d="M14.25.18l.9.2.73.26.59.3.45.32.38.34.29.34.22.34.17.35.13.34.08.35.04.35v.36l-.04.36-.08.35-.13.35-.17.34-.22.34-.29.35-.38.34-.45.32-.59.3-.73.25-.9.21-1.07.1h-.59l-.05.05-.02.09v3.23h3.6l.3.04.28.08.26.13.24.17.21.21.17.24.13.26.08.28.04.3v2.79l-.04.3-.08.28-.13.26-.17.24-.21.21-.24.17-.26.13-.28.08-.3.04h-4.22l-.33-.03-.32-.08-.3-.13-.27-.18-.24-.22-.2-.25-.15-.28-.1-.3-.04-.32v-3.73l.03-.3.08-.29.13-.26.18-.24.22-.2.25-.16.29-.11.31-.05h5.17v-1.35h-3.66l-.3-.04-.28-.08-.26-.13-.25-.17-.2-.21-.18-.24-.13-.26-.08-.28-.03-.3v-4.3l.03-.3.08-.28.13-.26.18-.24.2-.21.25-.17.26-.13.28-.08.3-.04h4.48zm-1.63 1.56a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5zM9.75 6.13v3.74l-.03.3-.08.28-.13.26-.18.24-.22.2-.25.17-.29.12-.31.04H3.1l-.3-.04-.28-.08-.26-.12-.24-.17-.21-.2-.17-.24-.13-.26-.08-.28-.04-.3V6.78l.04-.3.08-.28.13-.26.17-.24.21-.21.24-.17.26-.13.28-.08.3-.04h4.22l.33.03.32.08.3.13.27.18.24.22.2.25.15.28.1.3.04.32zm-5.1 8.13l-.9-.2-.73-.26-.59-.3-.45-.32-.38-.34-.29-.35-.22-.34-.17-.34-.13-.35-.08-.35-.04-.36v-.35l.04-.36.08-.35.13-.35.17-.34.22-.34.29-.35.38-.34.45-.32.59-.3.73-.25.9-.21 1.07-.1h.59l.05-.05.02-.09V6.26H5.4l-.3-.04-.28-.08-.26-.13-.24-.17-.21-.21-.17-.24-.13-.26-.08-.28-.04-.3V1.76l.04-.3.08-.28.13-.26.17-.24.21-.21.24-.17.26-.13.28-.08.3-.04h4.22l.33.03.32.08.3.13.27.18.24.22.2.25.15.28.1.3.04.32v3.73l-.03.3-.08.29-.13.26-.18.24-.22.2-.25.16-.29.11-.31.05H5.1v1.35h3.66l.3.04.28.08.26.13.25.17.2.21.18.24.13.26.08.28.03.3v4.3l-.03.3-.08.28-.13.26-.18.24-.2.21-.25.17-.26.13-.28.08-.3.04H4.65zm5.1 8.13a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z"/></svg>
+            </span>
+            <span class="tech-name">Python</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 2v20h20V2H2zm16.749 15.65c-.27 1.488-1.529 2.1-3.089 2.1-1.68 0-2.699-.811-2.999-2.001h1.949c.18.57.54.901 1.08.901.57 0 .93-.24.93-.84v-7.14h2.13v7.98zm-5.748-1.501c-.39 1.141-1.53 1.501-2.61 1.501-1.59 0-2.43-.841-2.73-1.951h1.95c.18.571.54.901 1.05.901.54 0 .84-.27.84-.751 0-.961-.84-.961-1.62-.961-.84 0-2.4-.12-2.4-1.98 0-1.35.93-1.951 2.37-1.951 1.47 0 2.221.751 2.43 1.77h-1.92c-.15-.45-.48-.751-.93-.751-.45 0-.75.21-.75.69 0 .841.81.841 1.56.841 1.11 0 2.459.27 2.459 2.011 0 .21-.03.45-.089.67z"/></svg>
+            </span>
+            <span class="tech-name">JavaScript</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 4.69 2 8v8c0 3.31 4.48 6 10 6s10-2.69 10-6V8c0-3.31-4.48-6-10-6zm0 2c4.41 0 8 1.79 8 4s-3.59 4-8 4-8-1.79-8-4 3.59-4 8-4zm8 12c0 2.21-3.59 4-8 4s-8-1.79-8-4V10c1.78 1.4 4.7 2 8 2s6.22-.6 8-2v6z"/></svg>
+            </span>
+            <span class="tech-name">SQL</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 7.54 16.59l.06-.05c.81-.84 1.4-1.89 1.4-3.54a5 5 0 0 0-5-5h-1v-2c0-.55-.45-1-1-1H9V5c0-1.66-1.34-3-3-3zm-6 2c.55 0 1 .45 1 1v2h2c.55 0 1 .45 1 1v1H8a3 3 0 0 0-3 3v2H4c-1.1 0-2-.9-2-2v-5c0-1.66 1.34-3 3-3zm6 6v3h2a2 2 0 0 1 2 2v3h-3.23c-.35 1.15-1.4 2-2.77 2H5.66c-.37-.73-.66-1.45-.66-2H3.8c-.44 0-.8-.36-.8-.8v-2.4a3.8 3.8 0 0 1 3.8-3.8h2.2v-2h3z"/></svg>
+            </span>
+            <span class="tech-name">Node.js</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI / Machine Learning -->
+      <div class="stack-category glow-card">
+        <div class="category-title-wrapper">
+          <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v12"/><path d="M8 10h8"/><path d="M8 14h8"/></svg>
+          <h3 class="category-title">AI & Applied ML</h3>
+        </div>
+        <div class="badge-grid">
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </span>
+            <span class="tech-name">LangChain</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+            </span>
+            <span class="tech-name">AI Agents</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </span>
+            <span class="tech-name">RAG Pipelines</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a1 1 0 0 1 1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 1 0 2h-7a1 1 0 0 0-1 1v7a1 1 0 0 1-2 0v-7a1 1 0 0 0-1-1H3a1 1 0 0 1 0-2h7a1 1 0 0 0 1-1V3a1 1 0 0 1 1-1z" fill="currentColor"/></svg>
+            </span>
+            <span class="tech-name">Gemini API</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-4.12 2.5 2.5 0 0 1 0-4.88A2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-4.12 2.5 2.5 0 0 0 0-4.88A2.5 2.5 0 0 0 14.5 2z"/></svg>
+            </span>
+            <span class="tech-name">GPT-4o</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
+            </span>
+            <span class="tech-name">Generative AI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend Engineering -->
+      <div class="stack-category glow-card">
+        <div class="category-title-wrapper">
+          <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          <h3 class="category-title">Backend Engineering</h3>
+        </div>
+        <div class="badge-grid">
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </span>
+            <span class="tech-name">FastAPI</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><path d="M12 8v8M5 16l7-8 7 8"/></svg>
+            </span>
+            <span class="tech-name">Microservices</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+            </span>
+            <span class="tech-name">PostgreSQL</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            </span>
+            <span class="tech-name">MongoDB</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+            </span>
+            <span class="tech-name">Redis</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+            </span>
+            <span class="tech-name">REST APIs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cloud & DevOps -->
+      <div class="stack-category glow-card">
+        <div class="category-title-wrapper">
+          <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+          <h3 class="category-title">Cloud & DevOps</h3>
+        </div>
+        <div class="badge-grid">
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </span>
+            <span class="tech-name">AWS</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </span>
+            <span class="tech-name">Docker</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 15V9a4 4 0 0 0-4-4H9M6 9v9"/></svg>
+            </span>
+            <span class="tech-name">Git</span>
+          </div>
+          <div class="tech-badge">
+            <span class="tech-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            </span>
+            <span class="tech-name">Linux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline Section -->
+  <section id="experience" class="scroll-fade">
+    <h2 class="section-title text-gradient">Work Experience</h2>
+    
+    <div class="timeline">
+      <!-- Job 1 -->
+      <div class="timeline-item timeline-item-active scroll-fade">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glow-card">
+          <span class="timeline-date">May 2025 – Present</span>
+          <div class="timeline-header-block">
+            <div>
+              <h3 class="timeline-title">Python Developer</h3>
+              <span class="timeline-company">@ <a href="#" target="_blank" rel="noopener noreferrer">Accepto Technologies</a></span>
+            </div>
+            <span class="timeline-location">Kolkata, IN</span>
+          </div>
+          <ul class="timeline-list">
+            <li>Designed and integrated AI-driven backends using <strong>FastAPI</strong> and <strong>LangChain</strong>, generating over <strong>30% efficiency gains</strong> in workflow automation.</li>
+            <li>Maintained high-throughput REST APIs on <strong>AWS (EC2, S3, Lambda)</strong> serving <strong>10K+ daily requests</strong> with a verified <strong>99.9% uptime</strong> record.</li>
+            <li>Developed microservices architecture backed by <strong>PostgreSQL</strong> and high-performance caching via <strong>Redis</strong>.</li>
+            <li>Implemented contextual search RAG (Retrieval-Augmented Generation) document search pipelines with <strong>LangChain</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="timeline-item purple-dot scroll-fade">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glow-card">
+          <span class="timeline-date">June 2024 – March 2025</span>
+          <div class="timeline-header-block">
+            <div>
+              <h3 class="timeline-title">Site Engineer</h3>
+              <span class="timeline-company">@ <span class="timeline-company">ORC Engineering Pvt. Ltd.</span></span>
+            </div>
+            <span class="timeline-location">West Bengal, IN</span>
+          </div>
+          <ul class="timeline-list">
+            <li>Directed cross-functional onsite teams and coordinated resource distribution for project execution tasks.</li>
+            <li>Optimized timeline coordination, managing contractor communications and handling end-to-end site inspection workflows.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="scroll-fade">
+    <h2 class="section-title text-gradient">Featured Projects</h2>
+    
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card glow-card scroll-fade">
+        <div class="project-card-header">
+          <svg class="project-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+          <div class="project-links">
+            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Gemini Image Analyzer</h3>
+          <span class="project-card-date">Jan – Mar 2026</span>
+          <p class="project-card-desc">Production-grade microservice exposing a FastAPI POST endpoint to parse and analyze base64-encoded image payloads. Built using the Gemini API, Docker, and mocks for test coverage.</p>
+        </div>
+        <div class="project-tags">
+          <span>FastAPI</span>
+          <span>Gemini API</span>
+          <span>Docker</span>
+          <span>CI/CD</span>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card glow-card scroll-fade delay-100">
+        <div class="project-card-header">
+          <svg class="project-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+          <div class="project-links">
+            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">YouTube Idea Generator</h3>
+          <span class="project-card-date">Oct – Dec 2025</span>
+          <p class="project-card-desc">Agentic workflow that extracts data from target YouTube channels, runs thumbnail analytics through GPT-4o Vision, and writes 30 ready-to-use content ideas to Airtable for under $1 per run.</p>
+        </div>
+        <div class="project-tags">
+          <span>n8n</span>
+          <span>GPT-4o</span>
+          <span>Apify</span>
+          <span>Airtable</span>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card glow-card scroll-fade delay-200">
+        <div class="project-card-header">
+          <svg class="project-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+          <div class="project-links">
+            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Trackify — AI Job Tracker</h3>
+          <span class="project-card-date">Jul – Sep 2025</span>
+          <p class="project-card-desc">An intelligent job tracking database employing RAG (Retrieval-Augmented Generation) context indexing to automatically analyze and match uploaded resumes with targeted job postings.</p>
+        </div>
+        <div class="project-tags">
+          <span>FastAPI</span>
+          <span>LangChain</span>
+          <span>Docker</span>
+          <span>AWS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certifications Section -->
+  <section id="education" class="scroll-fade">
+    <h2 class="section-title text-gradient">Education & Certifications</h2>
+    
+    <div class="edu-cert-wrapper">
+      <!-- Education -->
+      <div class="glow-card scroll-fade">
+        <div class="edu-card-body">
+          <h3 class="category-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">Education</h3>
+          
+          <div class="edu-item">
+            <div class="edu-meta">
+              <h4 class="edu-degree">BTech in Metallurgical Engineering</h4>
+              <span class="edu-year">2020 – 2024</span>
+            </div>
+            <span class="edu-institution">National Institute of Technology (NIT), Durgapur</span>
+            <span class="edu-details" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent);">CGPA: 7.0 / 10.0</span>
+            <p class="edu-details" style="margin-top: 8px;">Published peer-reviewed research analyzing corrosion-resistant alloy compositions.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="glow-card scroll-fade delay-150">
+        <div class="cert-card-body">
+          <h3 class="category-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">Certifications</h3>
+          
+          <a href="https://www.kaggle.com/certification/badges/dipayanmahato/105" target="_blank" rel="noopener noreferrer" class="cert-item-link">
+            <div class="cert-item">
+              <div class="cert-meta">
+                <h4 class="cert-title">5-Day AI Agents Intensive <span class="link-arrow">↗</span></h4>
+                <span class="cert-date">Dec 2025</span>
+              </div>
+              <span class="cert-issuer">Google</span>
+            </div>
+          </a>
+
+          <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_43M4hTekSb9rtPaPs_1766506197983_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="cert-item-link">
+            <div class="cert-item">
+              <div class="cert-meta">
+                <h4 class="cert-title">Solutions Architecture Job Simulation <span class="link-arrow">↗</span></h4>
+                <span class="cert-date">Dec 2025</span>
+              </div>
+              <span class="cert-issuer">Amazon Web Services (AWS)</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="scroll-fade">
+    <h2 class="section-title text-gradient">Get In Touch</h2>
+    
+    <div class="contact-wrapper">
+      <div class="contact-info scroll-fade">
+        <p class="contact-desc">
+          I'm currently open to full-time Backend Engineering and Applied AI opportunities. Whether you have a project idea, want to talk system architecture, or just want to connect, feel free to reach out!
+        </p>
+        
+        <div class="contact-details-list">
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l12-9.725v15.438h-24v-15.438l12 9.725z"/></svg>
+            </div>
+            <div class="contact-detail-content">
+              <h4>Email</h4>
+              <a href="mailto:dipayanmahato9733@gmail.com">dipayanmahato9733@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M20 22.622l-3.521-3.795c-.226-.243-.153-.619.108-.779 1.116-.683 1.861-1.908 1.861-3.305 0-2.181-1.777-3.953-3.963-3.953-1.047 0-1.989.412-2.697 1.082l-3.411-3.676c1.6-1.521 3.753-2.457 6.13-2.457 4.962 0 9 4.029 9 8.996 0 3.125-1.603 5.867-4.049 7.491.246.035.48.216.48.391zM4 10.743c0-3.125 1.603-5.867 4.049-7.491-.246-.035-.48-.216-.48-.391v-.239l3.521 3.795c.226.243.153.619-.108.779-1.116.683-1.861 1.908-1.861 3.305 0 2.181 1.777 3.953 3.963 3.953 1.047 0 1.989-.412 2.697-1.082l3.411 3.676c-1.6 1.521-3.753 2.457-6.13 2.457-4.962 0-9-4.029-9-8.996z"/></svg>
+            </div>
+            <div class="contact-detail-content">
+              <h4>Phone</h4>
+              <a href="tel:+916295623329">+91 6295623329</a>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div class="contact-detail-content">
+              <h4>Location</h4>
+              <p>Murshidabad / Kolkata, WB, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form glow-card scroll-fade delay-100" id="contact-form">
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" class="form-textarea" placeholder="How can I help you?" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submit-btn">
+          Send Message
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">&lt;<span>DM</span> /&gt;</div>
+      <p class="footer-text">© 2026 Dipayan Mahato. All rights reserved.</p>
+      <a href="#hero" class="footer-back-to-top">
+        Back to top 
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Alert Popup -->
+  <div class="form-alert" id="form-alert">
+    <span class="form-alert-icon">✓</span>
+    <span id="form-alert-message">Message sent successfully!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
