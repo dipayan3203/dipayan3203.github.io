@@ -1,544 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dipayan Mahato | Python Developer & Applied AI Engineer</title>
-  <meta name="description" content="Portfolio of Dipayan Mahato - Python Developer & Applied AI Engineer specializing in LangChain RAG pipelines, FastAPI microservices, and AWS cloud solutions.">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dipayan Mahato | Python Developer &amp; Applied AI Engineer</title>
+  <meta name="description" content="Portfolio of Dipayan Mahato — Python Developer &amp; Applied AI Engineer specializing in LangChain RAG pipelines, FastAPI microservices, and AWS cloud solutions." />
+
+  <!-- Google Fonts: Poppins (display) + Lato (body) + JetBrains Mono (code accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Lato:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome icons (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Background Glow Effects -->
-  <div class="bg-glow"></div>
-  <div class="bg-glow-right"></div>
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">&lt;<span>DM</span> /&gt;</a>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">☰</button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#stack" class="nav-link">Stack</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-        <li><a href="#contact" class="btn-contact btn-contact-mobile">Let's Connect</a></li>
-      </ul>
-      <a href="#contact" class="btn-contact">Let's Connect</a>
-    </div>
-  </nav>
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Dipayan Mahato — home">
+        <span class="logo-mark">&lt;DM/&gt;</span>
+      </a>
 
-  <!-- Hero Section -->
-  <header id="hero" class="scroll-fade">
-    <div class="hero-wrapper">
-      <div class="hero-content">
-        <h1 class="hero-title text-gradient">Dipayan Mahato</h1>
-        
-        <div class="hero-typing-container">
-          <span class="hero-typing" id="typing-text"></span><span class="cursor"></span>
-        </div>
+      <nav class="main-nav" id="mainNav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-        <p class="contact-desc" style="max-width: 600px; color: var(--text-secondary);">
-          I architect production-ready backends and engineer applied AI solutions that automate work and scale efficiently.
-        </p>
-
-        <div class="hero-ctas">
-          <a href="#projects" class="btn-primary">
-            View Projects 
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          <a href="javascript:window.print()" class="btn-secondary">
-            Download Resume
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          </a>
-        </div>
-
-        <div class="hero-socials">
-          <a href="https://linkedin.com/in/dipayan-mahato-5a1551262" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
-          <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
-            <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          </a>
-          <a href="mailto:dipayanmahato9733@gmail.com" class="social-icon" aria-label="Email">
-            <svg viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l12-9.725v15.438h-24v-15.438l12 9.725z"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Animated Interactive Visual -->
-      <div class="hero-visual">
-        <div class="tech-illustration">
-          <div class="orb-center"></div>
-          <div class="illustration-ring ring-1">
-            <div class="node node-1"></div>
-            <div class="node node-2"></div>
-          </div>
-          <div class="illustration-ring ring-2">
-            <div class="node node-3"></div>
-            <div class="node node-4"></div>
-          </div>
-          <div class="illustration-ring ring-3">
-            <div class="node node-5"></div>
-          </div>
-        </div>
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">Let's Connect</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- About Me Section -->
-  <section id="about" class="scroll-fade">
-    <h2 class="section-title text-gradient">About Me</h2>
-    
-    <div class="glow-card" style="max-width: 800px; margin: 0 auto; padding: 2.5rem;">
-      <p style="color: #E6EDF3; line-height: 1.9; font-size: 1.1rem;">
-        I started studying how metals resist corrosion. Now I build systems that resist failure. From NIT Durgapur to production-grade FastAPI backends and LangChain RAG pipelines — I found my edge where backend engineering meets applied AI, and I've been building there ever since.
-      </p>
-    </div>
-  </section>
+  <main id="main-content">
 
-  <!-- Tech Stack Section -->
-  <section id="stack" class="scroll-fade">
-    <h2 class="section-title text-gradient">Tech Stack</h2>
-    
-    <div class="stack-grid">
-      <!-- Languages -->
-      <div class="stack-category glow-card">
-        <div class="category-title-wrapper">
-          <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.25A3.25 3.25 0 0 0 13.5 13.25v1.5c0 .966.784 1.75 1.75 1.75H18M6 10h1.25A3.25 3.25 0 0 1 10.5 13.25v1.5c0 .966-.784 1.75-1.75 1.75H6M12 2v20"/></svg>
-          <h3 class="category-title">Languages</h3>
-        </div>
-        <div class="badge-grid">
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="22" height="22">
-            </span>
-            <span class="tech-name">Python</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="22" height="22">
-            </span>
-            <span class="tech-name">JavaScript</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="SQL" width="22" height="22">
-            </span>
-            <span class="tech-name">SQL</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="22" height="22">
-            </span>
-            <span class="tech-name">Node.js</span>
-          </div>
-        </div>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero-canvas" aria-hidden="true">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+        <span class="dot-grid"></span>
       </div>
 
-      <!-- AI / Machine Learning -->
-      <div class="stack-category glow-card">
-        <div class="category-title-wrapper">
-          <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v12"/><path d="M8 10h8"/><path d="M8 14h8"/></svg>
-          <h3 class="category-title">AI & Applied ML</h3>
-        </div>
-        <div class="badge-grid">
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="LangChain" width="22" height="22">
-            </span>
-            <span class="tech-name">LangChain</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
-            </span>
-            <span class="tech-name">AI Agents</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
-            </span>
-            <span class="tech-name">RAG Pipelines</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Gemini API" width="22" height="22">
-            </span>
-            <span class="tech-name">Gemini API</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg>
-            </span>
-            <span class="tech-name">GPT-4o</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707-.707M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
-            </span>
-            <span class="tech-name">Generative AI</span>
-          </div>
-        </div>
-      </div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span>Open to Backend &amp; Applied AI roles</p>
+          <h1 class="hero-title">
+            Hey, I'm <span class="text-highlight">Dipayan Mahato</span><br />
+            I architect backends.<br class="hide-mobile" />
+            I engineer AI that ships.
+          </h1>
+          <p class="hero-subtitle">
+            Python Developer &amp; Applied AI Engineer building production-ready backends and
+            applied AI systems — FastAPI microservices, LangChain RAG pipelines, and AWS
+            infrastructure that holds up under real traffic.
+          </p>
 
-      <!-- Backend Engineering -->
-      <div class="stack-category glow-card">
-        <div class="category-title-wrapper">
-          <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-          <h3 class="category-title">Backend Engineering</h3>
-        </div>
-        <div class="badge-grid">
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" width="22" height="22">
-            </span>
-            <span class="tech-name">FastAPI</span>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View My Projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="#" class="btn btn-outline" id="downloadResumeBtn">Download Resume</a>
           </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><path d="M12 8v8M5 16l7-8 7 8"/></svg>
-            </span>
-            <span class="tech-name">Microservices</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" width="22" height="22">
-            </span>
-            <span class="tech-name">PostgreSQL</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="22" height="22">
-            </span>
-            <span class="tech-name">MongoDB</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" width="22" height="22">
-            </span>
-            <span class="tech-name">Redis</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-            </span>
-            <span class="tech-name">REST APIs</span>
-          </div>
-        </div>
-      </div>
 
-      <!-- Cloud & DevOps -->
-      <div class="stack-category glow-card">
-        <div class="category-title-wrapper">
-          <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-          <h3 class="category-title">Cloud & DevOps</h3>
-        </div>
-        <div class="badge-grid">
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" width="22" height="22">
-            </span>
-            <span class="tech-name">AWS</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" width="22" height="22">
-            </span>
-            <span class="tech-name">Docker</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="22" height="22">
-            </span>
-            <span class="tech-name">Git</span>
-          </div>
-          <div class="tech-badge">
-            <span class="tech-icon">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" width="22" height="22">
-            </span>
-            <span class="tech-name">Linux</span>
+          <div class="hero-social" aria-label="Social links">
+            <a href="https://linkedin.com/in/dipayan-mahato-5a1551262" target="_blank" rel="noopener noreferrer" aria-label="Dipayan Mahato on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" aria-label="Dipayan Mahato on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="mailto:dipayanmahato9733@gmail.com" aria-label="Email Dipayan Mahato"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Experience Timeline Section -->
-  <section id="experience" class="scroll-fade">
-    <h2 class="section-title text-gradient">Work Experience</h2>
-    
-    <div class="timeline">
-      <div class="timeline-item timeline-item-active scroll-fade">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content glow-card">
-          <span class="timeline-date">May 2025 – Present</span>
-          <div class="timeline-header-block">
-            <div>
-              <h3 class="timeline-title">Python Developer</h3>
-              <span class="timeline-company">@ <a href="#" target="_blank" rel="noopener noreferrer">Accepto Technologies</a></span>
+        <div class="hero-visual">
+          <!-- Signature element: stylised code console, not a photo -->
+          <div class="console-frame" role="img" aria-label="Illustration of a code editor window representing backend and AI development">
+            <div class="console-bar">
+              <span class="console-dot dot-red"></span>
+              <span class="console-dot dot-yellow"></span>
+              <span class="console-dot dot-green"></span>
+              <span class="console-filename">main.py</span>
             </div>
-            <span class="timeline-location">Kolkata, IN</span>
+            <pre class="console-body"><code><span class="code-kw">from</span> fastapi <span class="code-kw">import</span> FastAPI
+<span class="code-kw">from</span> langchain <span class="code-kw">import</span> RAGPipeline
+
+app = FastAPI()
+pipeline = RAGPipeline(model=<span class="code-str">"gemini-pro"</span>)
+
+<span class="code-deco">@app.post</span>(<span class="code-str">"/analyze"</span>)
+<span class="code-kw">async def</span> <span class="code-fn">analyze</span>(payload: Request):
+    result = <span class="code-kw">await</span> pipeline.run(payload)
+    <span class="code-kw">return</span> {<span class="code-str">"status"</span>: <span class="code-str">"200 OK"</span>}
+    <span class="code-comment"># uptime: 99.9%</span></code></pre>
+            <span class="chip chip-yellow" style="--r:-7deg">🐍 Python</span>
+            <span class="chip chip-teal" style="--r:5deg">⚡ FastAPI</span>
+            <span class="chip chip-coral" style="--r:-4deg">🧠 LangChain</span>
+            <span class="chip chip-violet" style="--r:6deg">☁️ AWS</span>
           </div>
-          <ul class="timeline-list">
-            <li>Designed and integrated AI-driven backends using <strong>FastAPI</strong> and <strong>LangChain</strong>, generating over <strong>30% efficiency gains</strong> in workflow automation.</li>
-            <li>Maintained high-throughput REST APIs on <strong>AWS (EC2, S3, Lambda)</strong> serving <strong>10K+ daily requests</strong> with a verified <strong>99.9% uptime</strong> record.</li>
-            <li>Developed microservices architecture backed by <strong>PostgreSQL</strong> and high-performance caching via <strong>Redis</strong>.</li>
-            <li>Implemented contextual search RAG (Retrieval-Augmented Generation) document search pipelines with <strong>LangChain</strong>.</li>
+        </div>
+      </div>
+
+      <div class="container">
+        <dl class="stats-row">
+          <div class="stat">
+            <dt class="stat-number" data-count="1">0</dt>
+            <dd class="stat-label">Years Experience</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-number" data-count="3">0</dt>
+            <dd class="stat-label">Projects Shipped</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-number" data-count="10" data-suffix="K+">0</dt>
+            <dd class="stat-label">Daily API Requests</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-number" data-count="99.9" data-suffix="%">0</dt>
+            <dd class="stat-label">Verified Uptime</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-visual" aria-hidden="true">
+          <div class="about-frame">
+            <i class="fa-solid fa-diagram-project about-frame-icon"></i>
+            <p class="about-frame-caption">Metallurgy → Metallurgical failure modes → Systems failure modes.<br />Same instinct, different material.</p>
+          </div>
+          <div class="about-card">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <p><strong>B.Tech, Metallurgical Engineering</strong><br />NIT Durgapur &middot; 2020–2024</p>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow">Get to know me</p>
+          <h2 class="section-title">From corrosion-resistant alloys to fault-resistant systems.</h2>
+          <p class="lead">
+            I started out at NIT Durgapur studying how metals resist corrosion. Now I build
+            backend systems designed to resist failure instead — same instinct for root causes,
+            just a different material.
+          </p>
+          <p>
+            My focus sits where backend engineering meets applied AI: production-grade FastAPI
+            services, LangChain-powered RAG pipelines, and AWS infrastructure that holds up under
+            real traffic. I like systems that are boring in the best way — predictable,
+            observable, and hard to break.
+          </p>
+
+          <ul class="about-highlights">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> FastAPI &amp; microservice architecture</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> LangChain RAG pipelines &amp; AI agents</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> AWS cloud infrastructure (EC2, S3, Lambda)</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> PostgreSQL, MongoDB &amp; Redis at scale</li>
           </ul>
+
+          <a href="#contact" class="btn btn-dark">Let's Work Together</a>
         </div>
       </div>
+    </section>
 
-      <div class="timeline-item purple-dot scroll-fade">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content glow-card">
-          <span class="timeline-date">June 2024 – March 2025</span>
-          <div class="timeline-header-block">
-            <div>
-              <h3 class="timeline-title">Site Engineer</h3>
-              <span class="timeline-company">@ <span class="timeline-company">ORC Engineering Pvt. Ltd.</span></span>
+    <!-- ============ TECH STACK ============ -->
+    <section class="section section-alt" id="stack">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">What I work with</p>
+          <h2 class="section-title">Tech stack</h2>
+          <p class="section-subtitle">The languages, frameworks, and infrastructure I reach for when building production systems.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="skill-card">
+            <div class="skill-icon icon-violet"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+            <h3>Languages</h3>
+            <p>Core languages for backend logic, scripting, and data work.</p>
+            <ul class="tag-list">
+              <li>Python</li><li>JavaScript</li><li>SQL</li><li>Node.js</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon icon-coral"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
+            <h3>AI &amp; Applied ML</h3>
+            <p>Retrieval, agents, and generative models wired into real products.</p>
+            <ul class="tag-list">
+              <li>LangChain</li><li>AI Agents</li><li>RAG Pipelines</li><li>Gemini API</li><li>GPT-4o</li><li>Generative AI</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon icon-teal"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
+            <h3>Backend Engineering</h3>
+            <p>APIs and data layers built to stay fast under real load.</p>
+            <ul class="tag-list">
+              <li>FastAPI</li><li>Microservices</li><li>PostgreSQL</li><li>MongoDB</li><li>Redis</li><li>REST APIs</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon icon-yellow"><i class="fa-solid fa-cloud" aria-hidden="true"></i></div>
+            <h3>Cloud &amp; DevOps</h3>
+            <p>Shipping and running services reliably in production.</p>
+            <ul class="tag-list">
+              <li>AWS</li><li>Docker</li><li>Git</li><li>Linux</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Where I've worked</p>
+          <h2 class="section-title">Work experience</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <p class="timeline-date">May 2025 &ndash; Present</p>
+              <h3>Python Developer</h3>
+              <p class="timeline-org">Accepto Technologies &middot; Kolkata, IN</p>
+              <ul>
+                <li>Designed and integrated AI-driven backends using FastAPI and LangChain, generating over 30% efficiency gains in workflow automation.</li>
+                <li>Maintained high-throughput REST APIs on AWS (EC2, S3, Lambda) serving 10K+ daily requests with a verified 99.9% uptime record.</li>
+                <li>Developed microservices architecture backed by PostgreSQL and high-performance caching via Redis.</li>
+                <li>Implemented contextual RAG (Retrieval-Augmented Generation) document search pipelines with LangChain.</li>
+              </ul>
             </div>
-            <span class="timeline-location">West Bengal, IN</span>
-          </div>
-          <ul class="timeline-list">
-            <li>Directed cross-functional onsite teams and coordinated resource distribution for project execution tasks.</li>
-            <li>Optimized timeline coordination, managing contractor communications and handling end-to-end site inspection workflows.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+          </li>
 
-  <!-- Featured Projects Section -->
-  <section id="projects" class="scroll-fade">
-    <h2 class="section-title text-gradient">Featured Projects</h2>
-    
-    <div class="projects-grid">
-      <div class="project-card glow-card scroll-fade">
-        <div class="project-card-header">
-          <svg class="project-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-          <div class="project-links">
-            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            </a>
-          </div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-card-title">Gemini Image Analyzer</h3>
-          <span class="project-card-date">Jan – Mar 2026</span>
-          <p class="project-card-desc">Production-grade microservice exposing a FastAPI POST endpoint to parse and analyze base64-encoded image payloads. Built using the Gemini API, Docker, and mocks for test coverage.</p>
-        </div>
-        <div class="project-tags">
-          <span>FastAPI</span>
-          <span>Gemini API</span>
-          <span>Docker</span>
-          <span>CI/CD</span>
-        </div>
-      </div>
-
-      <div class="project-card glow-card scroll-fade delay-100">
-        <div class="project-card-header">
-          <svg class="project-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-          <div class="project-links">
-            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            </a>
-          </div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-card-title">YouTube Idea Generator</h3>
-          <span class="project-card-date">Oct – Dec 2025</span>
-          <p class="project-card-desc">Agentic workflow that extracts data from target YouTube channels, runs thumbnail analytics through GPT-4o Vision, and writes 30 ready-to-use content ideas to Airtable for under $1 per run.</p>
-        </div>
-        <div class="project-tags">
-          <span>n8n</span>
-          <span>GPT-4o</span>
-          <span>Apify</span>
-          <span>Airtable</span>
-        </div>
-      </div>
-
-      <div class="project-card glow-card scroll-fade delay-200">
-        <div class="project-card-header">
-          <svg class="project-folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-          <div class="project-links">
-            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="GitHub Repository">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            </a>
-          </div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-card-title">Trackify — AI Job Tracker</h3>
-          <span class="project-card-date">Apr – Jul 2026</span>
-          <p class="project-card-desc">An intelligent job tracking database employing RAG context indexing to automatically analyze and match uploaded resumes with targeted job postings.</p>
-        </div>
-        <div class="project-tags">
-          <span>FastAPI</span>
-          <span>LangChain</span>
-          <span>Docker</span>
-          <span>AWS</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education & Certifications Section -->
-  <section id="education" class="scroll-fade">
-    <h2 class="section-title text-gradient">Education & Certifications</h2>
-    
-    <div class="edu-cert-wrapper">
-      <div class="glow-card scroll-fade">
-        <div class="edu-card-body">
-          <h3 class="category-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">Education</h3>
-          <div class="edu-item">
-            <div class="edu-meta">
-              <h4 class="edu-degree">BTech in Metallurgical Engineering</h4>
-              <span class="edu-year">2020 – 2024</span>
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <p class="timeline-date">June 2024 &ndash; March 2025</p>
+              <h3>Site Engineer</h3>
+              <p class="timeline-org">ORC Engineering Pvt. Ltd. &middot; West Bengal, IN</p>
+              <ul>
+                <li>Directed cross-functional onsite teams and coordinated resource distribution for project execution tasks.</li>
+                <li>Optimized timeline coordination, managing contractor communications and end-to-end site inspection workflows.</li>
+              </ul>
             </div>
-            <span class="edu-institution">National Institute of Technology (NIT), Durgapur</span>
-            <span class="edu-details" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent);">CGPA: 7.0 / 10.0</span>
-            <p class="edu-details" style="margin-top: 8px;">Published peer-reviewed research analyzing corrosion-resistant alloy compositions.</p>
-          </div>
-        </div>
+          </li>
+        </ol>
       </div>
+    </section>
 
-      <div class="glow-card scroll-fade delay-150">
-        <div class="cert-card-body">
-          <h3 class="category-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">Certifications</h3>
-          
-          <a href="https://www.kaggle.com/certification/badges/dipayanmahato/105" target="_blank" rel="noopener noreferrer" class="cert-item-link">
-            <div class="cert-item">
-              <div class="cert-meta">
-                <h4 class="cert-title">5-Day AI Agents Intensive <span class="link-arrow">↗</span></h4>
-                <span class="cert-date">Dec 2025</span>
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Selected work</p>
+          <h2 class="section-title">Featured projects</h2>
+          <p class="section-subtitle">A few things I've built recently — all with write-ups and code on GitHub.</p>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card">
+            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="work-link" aria-label="View Gemini Image Analyzer on GitHub">
+              <div class="work-media work-media-code icon-violet-bg">
+                <i class="fa-solid fa-image" aria-hidden="true"></i>
+                <span class="work-overlay">
+                  <span class="work-overlay-tag">Jan &ndash; Mar 2026</span>
+                  <span class="work-overlay-title">Gemini Image Analyzer</span>
+                  <span class="work-overlay-cta">View on GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                </span>
               </div>
-              <span class="cert-issuer">Google</span>
+            </a>
+            <div class="work-meta">
+              <h3>Gemini Image Analyzer</h3>
+              <p>Production-grade microservice exposing a FastAPI POST endpoint to parse and analyze base64-encoded image payloads, built with the Gemini API.</p>
+              <ul class="tag-list tag-list-compact">
+                <li>FastAPI</li><li>Gemini API</li><li>Docker</li><li>CI/CD</li>
+              </ul>
             </div>
+          </article>
+
+          <article class="work-card">
+            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="work-link" aria-label="View YouTube Idea Generator on GitHub">
+              <div class="work-media work-media-code icon-coral-bg">
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                <span class="work-overlay">
+                  <span class="work-overlay-tag">Oct &ndash; Dec 2025</span>
+                  <span class="work-overlay-title">YouTube Idea Generator</span>
+                  <span class="work-overlay-cta">View on GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                </span>
+              </div>
+            </a>
+            <div class="work-meta">
+              <h3>YouTube Idea Generator</h3>
+              <p>Agentic workflow that pulls channel data, runs thumbnail analytics through GPT-4o Vision, and writes 30 content ideas to Airtable for under $1 per run.</p>
+              <ul class="tag-list tag-list-compact">
+                <li>n8n</li><li>GPT-4o</li><li>Apify</li><li>Airtable</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="work-link" aria-label="View Trackify AI Job Tracker on GitHub">
+              <div class="work-media work-media-code icon-teal-bg">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                <span class="work-overlay">
+                  <span class="work-overlay-tag">Apr &ndash; Jul 2026</span>
+                  <span class="work-overlay-title">Trackify &mdash; AI Job Tracker</span>
+                  <span class="work-overlay-cta">View on GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                </span>
+              </div>
+            </a>
+            <div class="work-meta">
+              <h3>Trackify &mdash; AI Job Tracker</h3>
+              <p>An intelligent job-tracking database using RAG context indexing to automatically match uploaded resumes with targeted job postings.</p>
+              <ul class="tag-list tag-list-compact">
+                <li>FastAPI</li><li>LangChain</li><li>Docker</li><li>AWS</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION & CERTIFICATIONS ============ -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Background</p>
+          <h2 class="section-title">Education &amp; certifications</h2>
+        </div>
+
+        <div class="edu-grid">
+          <div class="edu-card edu-card-main">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <p class="edu-date">2020 &ndash; 2024</p>
+            <h3>B.Tech in Metallurgical Engineering</h3>
+            <p class="timeline-org">National Institute of Technology (NIT), Durgapur &middot; CGPA 7.0 / 10.0</p>
+            <p>Published peer-reviewed research analyzing corrosion-resistant alloy compositions.</p>
+          </div>
+
+          <a class="edu-card edu-card-cert" href="https://www.kaggle.com/certification/badges/dipayanmahato/105" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            <p class="edu-date">Dec 2025</p>
+            <h3>5-Day AI Agents Intensive</h3>
+            <p class="timeline-org">Google <i class="fa-solid fa-arrow-up-right-from-square cert-link-icon" aria-hidden="true"></i></p>
           </a>
 
-          <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_43M4hTekSb9rtPaPs_1766506197983_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="cert-item-link">
-            <div class="cert-item">
-              <div class="cert-meta">
-                <h4 class="cert-title">Solutions Architecture Job Simulation <span class="link-arrow">↗</span></h4>
-                <span class="cert-date">Dec 2025</span>
-              </div>
-              <span class="cert-issuer">Amazon Web Services (AWS)</span>
-            </div>
+          <a class="edu-card edu-card-cert" href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_43M4hTekSb9rtPaPs_1766506197983_completion_certificate.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            <p class="edu-date">Dec 2025</p>
+            <h3>Solutions Architecture Job Simulation</h3>
+            <p class="timeline-org">Amazon Web Services (AWS) <i class="fa-solid fa-arrow-up-right-from-square cert-link-icon" aria-hidden="true"></i></p>
           </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="scroll-fade">
-    <h2 class="section-title text-gradient">Get In Touch</h2>
-    
-    <div class="contact-wrapper">
-      <div class="contact-info scroll-fade">
-        <p class="contact-desc">
-          I'm currently open to full-time Backend Engineering and Applied AI opportunities. Whether you have a project idea, want to talk system architecture, or just want to connect, feel free to reach out!
-        </p>
-        
-        <div class="contact-details-list">
-          <div class="contact-detail-item">
-            <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l12-9.725v15.438h-24v-15.438l12 9.725z"/></svg>
-            </div>
-            <div class="contact-detail-content">
-              <h4>Email</h4>
-              <a href="mailto:dipayanmahato9733@gmail.com">dipayanmahato9733@gmail.com</a>
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div class="contact-copy">
+            <p class="eyebrow eyebrow-light">Get in touch</p>
+            <h2 class="section-title text-on-dark">Open to full-time roles.<br />Let's talk.</h2>
+            <p class="contact-lead">
+              I'm currently open to full-time Backend Engineering and Applied AI opportunities.
+              Whether you have a role in mind, want to talk system architecture, or just want to
+              connect — reach out below.
+            </p>
+
+            <ul class="contact-info-list">
+              <li>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:dipayanmahato9733@gmail.com">dipayanmahato9733@gmail.com</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <a href="tel:+916295623329">+91 62956 23329</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span>Kolkata, WB, India</span>
+              </li>
+            </ul>
+
+            <div class="hero-social contact-social" aria-label="Social links">
+              <a href="https://linkedin.com/in/dipayan-mahato-5a1551262" target="_blank" rel="noopener noreferrer" aria-label="Dipayan Mahato on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+              <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" aria-label="Dipayan Mahato on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
             </div>
           </div>
 
-          <div class="contact-detail-item">
-            <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            </div>
-            <div class="contact-detail-content">
-              <h4>Phone</h4>
-              <a href="tel:+916295623329">+91 6295623329</a>
-            </div>
-          </div>
+          <form class="contact-form" id="contactForm" novalidate>
+            <h2 class="visually-hidden">Contact form</h2>
 
-          <div class="contact-detail-item">
-            <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
             </div>
-            <div class="contact-detail-content">
-              <h4>LinkedIn</h4>
-              <a href="https://linkedin.com/in/dipayan-mahato-5a1551262" target="_blank" rel="noopener noreferrer">linkedin.com/in/dipayan-mahato</a>
-            </div>
-          </div>
 
-          <div class="contact-detail-item">
-            <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
             </div>
-            <div class="contact-detail-content">
-              <h4>GitHub</h4>
-              <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer">github.com/dipayan3203</a>
-            </div>
-          </div>
 
-          <div class="contact-detail-item">
-            <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
             </div>
-            <div class="contact-detail-content">
-              <h4>Location</h4>
-              <p>Kolkata, WB, India</p>
-            </div>
-          </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Send Message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            </button>
+
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
+    </section>
 
-      <!-- Contact Form -->
-      <form class="contact-form glow-card scroll-fade delay-100" id="contact-form" action="https://formspree.io/f/mbdeparb" method="POST">
-        <div class="form-group">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
-        </div>
+  </main>
 
-        <div class="form-group">
-          <label for="message" class="form-label">Message</label>
-          <textarea id="message" name="message" class="form-textarea" placeholder="How can I help you?" required></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit" id="submit-btn">
-          Send Message
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">&lt;<span>DM</span> /&gt;</div>
-      <p class="footer-text">© 2026 Dipayan Mahato. All rights reserved.</p>
-      <a href="#hero" class="footer-back-to-top">
-        Back to top 
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#top" class="logo logo-footer" aria-label="Dipayan Mahato — home">
+        <span class="logo-mark">&lt;DM/&gt;</span>
       </a>
+
+      <nav aria-label="Footer">
+        <ul class="footer-nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <p class="footer-copy">&copy; <span id="footerYear">2026</span> Dipayan Mahato. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Alert Popup -->
-  <div class="form-alert" id="form-alert">
-    <span class="form-alert-icon">✓</span>
-    <span id="form-alert-message">Message sent successfully!</span>
-  </div>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
