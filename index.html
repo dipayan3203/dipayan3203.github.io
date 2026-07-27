@@ -3,462 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dipayan Mahato | Python Developer &amp; Applied AI Engineer</title>
-  <meta name="description" content="Portfolio of Dipayan Mahato — Python Developer &amp; Applied AI Engineer specializing in LangChain RAG pipelines, FastAPI microservices, and AWS cloud solutions." />
-
-  <!-- Google Fonts: Poppins (display) + Lato (body) + JetBrains Mono (code accents) -->
+  <title>Dipayan Mahato · Python &amp; AI Engineer</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Portfolio of Dipayan Mahato - Python Developer and Applied AI Engineer specializing in FastAPI, LangChain, and intelligent systems." />
+  <meta name="keywords" content="Python Developer, AI Engineer, FastAPI, LangChain, Machine Learning" />
+  <meta name="theme-color" content="#6b4c7a" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dipayan Mahato · Python &amp; AI Engineer" />
+  <meta property="og:description" content="Building intelligent systems with Python, FastAPI, and LangChain." />
+  <meta property="og:image" content="https://dipayan3203.vercel.app/assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://dipayan3203.vercel.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://dipayan3203.vercel.app" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+  
+  <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Lato:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome icons (CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@300;400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
 </head>
 <body>
+  <div class="container">
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="badge"><i class="fas fa-code"></i> Python &amp; AI</div>
+        <h1>Dipayan <span>Mahato</span></h1>
+        <p class="hero-sub">Python Developer · Applied AI Engineer</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Let's Talk</a>
+        </div>
+      </div>
+      <!-- Code Console -->
+      <div class="code-console">
+        <div class="console-header">
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+          <span class="console-dot"></span>
+        </div>
+        <div class="console-code">
+          <span class="cmt"># FastAPI + LangChain</span><br>
+          <span class="key">from</span> fastapi <span class="key">import</span> FastAPI<br>
+          <span class="key">from</span> langchain.llms <span class="key">import</span> <span class="fn">OpenAI</span><br><br>
+          app = <span class="fn">FastAPI</span>()<br><br>
+          <span class="key">@app</span>.<span class="fn">get</span>(<span class="str">"/ask"</span>)<br>
+          <span class="key">async def</span> <span class="fn">ask</span>(q: <span class="key">str</span>):<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">return</span> {<span class="str">"answer"</span>: llm(q)}
+        </div>
+        <div class="stack-chips">
+          <span class="chip"><i class="fab fa-python"></i> Python</span>
+          <span class="chip"><i class="fas fa-bolt"></i> FastAPI</span>
+          <span class="chip"><i class="fas fa-brain"></i> LangChain</span>
+          <span class="chip"><i class="fas fa-cloud"></i> Docker</span>
+        </div>
+      </div>
+    </section>
 
-  <!-- Skip link for keyboard / screen-reader users -->
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <h2><i class="fas fa-user-astronaut" style="margin-right:10px;color:#6b4c7a;"></i> About</h2>
+      <div class="card" style="max-width:800px;">
+        <p style="font-size:1.05rem;">I'm Dipayan Mahato, a Python Developer and Applied AI Engineer passionate about building intelligent systems. I blend backend engineering with machine learning to create products that are both robust and innovative. Currently exploring LLMs, agentic workflows, and scalable APIs.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:1.2rem;">
+          <span class="chip" style="background:#2b8c7c;color:white;"><i class="fas fa-map-pin"></i> Kolkata, India</span>
+          <span class="chip" style="background:#6b4c7a;color:white;"><i class="fas fa-graduation-cap"></i> B.Tech CSE</span>
+          <span class="chip" style="background:#c45a6b;color:white;"><i class="fas fa-code-branch"></i> 10+ repos</span>
+        </div>
+      </div>
+    </section>
 
-  <!-- ============ HEADER / NAV ============ -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="#top" class="logo" aria-label="Dipayan Mahato — home">
-        <span class="logo-mark">&lt;DM/&gt;</span>
-      </a>
+    <!-- ===== TECH STACK ===== -->
+    <section class="section" id="techstack">
+      <h2><i class="fas fa-layer-group" style="margin-right:10px;color:#6b4c7a;"></i> Tech Stack</h2>
+      <div class="grid-2col">
+        <div class="card"><i class="fas fa-code card-icon"></i><h3>Languages</h3><p>Python · JavaScript · TypeScript · SQL</p></div>
+        <div class="card"><i class="fas fa-cubes card-icon"></i><h3>Frameworks</h3><p>FastAPI · Django · LangChain · React</p></div>
+        <div class="card"><i class="fas fa-cloud card-icon"></i><h3>DevOps</h3><p>Docker · AWS · Vercel · Render · GitHub Actions</p></div>
+        <div class="card"><i class="fas fa-database card-icon"></i><h3>Data &amp; AI</h3><p>PostgreSQL · Redis · OpenCV · HuggingFace</p></div>
+      </div>
+    </section>
 
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#stack">Stack</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+      <h2><i class="fab fa-github" style="margin-right:10px;color:#6b4c7a;"></i> Projects</h2>
+      <div id="repo-grid" class="grid-2col">
+        <!-- cards injected by github.js -->
+        <div class="card" style="text-align:center;padding:2rem;"><i class="fas fa-spinner fa-pulse" style="font-size:2rem;color:#6b4c7a;"></i><p style="margin-top:0.8rem;">Loading repositories...</p></div>
+      </div>
+    </section>
 
-      <div class="header-actions">
-        <a href="#contact" class="btn btn-primary btn-sm">Let's Connect</a>
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation menu">
-          <span></span><span></span><span></span>
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <h2><i class="fas fa-paper-plane" style="margin-right:10px;color:#6b4c7a;"></i> Contact</h2>
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mbdeparb" method="POST">
+        <div class="form-group">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="How can I help?" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">
+          Send Message
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
-      </div>
-    </div>
-  </header>
-
-  <main id="main-content">
-
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="top">
-      <div class="hero-canvas" aria-hidden="true">
-        <span class="blob blob-a"></span>
-        <span class="blob blob-b"></span>
-        <span class="dot-grid"></span>
-      </div>
-
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="dot"></span>Open to Backend &amp; Applied AI roles</p>
-          <h1 class="hero-title">
-            Hey, I'm <span class="text-highlight">Dipayan Mahato</span><br />
-            I architect backends.<br class="hide-mobile" />
-            I engineer AI that ships.
-          </h1>
-          <p class="hero-subtitle">
-            Python Developer &amp; Applied AI Engineer building production-ready backends and
-            applied AI systems — FastAPI microservices, LangChain RAG pipelines, and AWS
-            infrastructure that holds up under real traffic.
-          </p>
-
-          <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">View My Projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            <a href="#" class="btn btn-outline" id="downloadResumeBtn">Download Resume</a>
-          </div>
-
-          <div class="hero-social" aria-label="Social links">
-            <a href="https://linkedin.com/in/dipayan-mahato-5a1551262" target="_blank" rel="noopener noreferrer" aria-label="Dipayan Mahato on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" aria-label="Dipayan Mahato on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-            <a href="mailto:dipayanmahato9733@gmail.com" aria-label="Email Dipayan Mahato"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
-          </div>
-        </div>
-
-        <div class="hero-visual">
-          <!-- Signature element: stylised code console, not a photo -->
-          <div class="console-frame" role="img" aria-label="Illustration of a code editor window representing backend and AI development">
-            <div class="console-bar">
-              <span class="console-dot dot-red"></span>
-              <span class="console-dot dot-yellow"></span>
-              <span class="console-dot dot-green"></span>
-              <span class="console-filename">main.py</span>
-            </div>
-            <pre class="console-body"><code><span class="code-kw">from</span> fastapi <span class="code-kw">import</span> FastAPI
-<span class="code-kw">from</span> langchain <span class="code-kw">import</span> RAGPipeline
-
-app = FastAPI()
-pipeline = RAGPipeline(model=<span class="code-str">"gemini-pro"</span>)
-
-<span class="code-deco">@app.post</span>(<span class="code-str">"/analyze"</span>)
-<span class="code-kw">async def</span> <span class="code-fn">analyze</span>(payload: Request):
-    result = <span class="code-kw">await</span> pipeline.run(payload)
-    <span class="code-kw">return</span> {<span class="code-str">"status"</span>: <span class="code-str">"200 OK"</span>}
-    <span class="code-comment"># uptime: 99.9%</span></code></pre>
-            <span class="chip chip-yellow" style="--r:-7deg">🐍 Python</span>
-            <span class="chip chip-teal" style="--r:5deg">⚡ FastAPI</span>
-            <span class="chip chip-coral" style="--r:-4deg">🧠 LangChain</span>
-            <span class="chip chip-violet" style="--r:6deg">☁️ AWS</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <dl class="stats-row">
-          <div class="stat">
-            <dt class="stat-number" data-count="1">0</dt>
-            <dd class="stat-label">Years Experience</dd>
-          </div>
-          <div class="stat">
-            <dt class="stat-number" data-count="3">0</dt>
-            <dd class="stat-label">Projects Shipped</dd>
-          </div>
-          <div class="stat">
-            <dt class="stat-number" data-count="10" data-suffix="K+">0</dt>
-            <dd class="stat-label">Daily API Requests</dd>
-          </div>
-          <div class="stat">
-            <dt class="stat-number" data-count="99.9" data-suffix="%">0</dt>
-            <dd class="stat-label">Verified Uptime</dd>
-          </div>
-        </dl>
-      </div>
+      </form>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="section about" id="about">
-      <div class="container about-grid">
-        <div class="about-visual" aria-hidden="true">
-          <div class="about-frame">
-            <i class="fa-solid fa-diagram-project about-frame-icon"></i>
-            <p class="about-frame-caption">Metallurgy → Metallurgical failure modes → Systems failure modes.<br />Same instinct, different material.</p>
-          </div>
-          <div class="about-card">
-            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-            <p><strong>B.Tech, Metallurgical Engineering</strong><br />NIT Durgapur &middot; 2020–2024</p>
-          </div>
-        </div>
-
-        <div class="about-copy">
-          <p class="eyebrow">Get to know me</p>
-          <h2 class="section-title">From corrosion-resistant alloys to fault-resistant systems.</h2>
-          <p class="lead">
-            I started out at NIT Durgapur studying how metals resist corrosion. Now I build
-            backend systems designed to resist failure instead — same instinct for root causes,
-            just a different material.
-          </p>
-          <p>
-            My focus sits where backend engineering meets applied AI: production-grade FastAPI
-            services, LangChain-powered RAG pipelines, and AWS infrastructure that holds up under
-            real traffic. I like systems that are boring in the best way — predictable,
-            observable, and hard to break.
-          </p>
-
-          <ul class="about-highlights">
-            <li><i class="fa-solid fa-check" aria-hidden="true"></i> FastAPI &amp; microservice architecture</li>
-            <li><i class="fa-solid fa-check" aria-hidden="true"></i> LangChain RAG pipelines &amp; AI agents</li>
-            <li><i class="fa-solid fa-check" aria-hidden="true"></i> AWS cloud infrastructure (EC2, S3, Lambda)</li>
-            <li><i class="fa-solid fa-check" aria-hidden="true"></i> PostgreSQL, MongoDB &amp; Redis at scale</li>
-          </ul>
-
-          <a href="#contact" class="btn btn-dark">Let's Work Together</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ TECH STACK ============ -->
-    <section class="section section-alt" id="stack">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">What I work with</p>
-          <h2 class="section-title">Tech stack</h2>
-          <p class="section-subtitle">The languages, frameworks, and infrastructure I reach for when building production systems.</p>
-        </div>
-
-        <div class="card-grid">
-          <article class="skill-card">
-            <div class="skill-icon icon-violet"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
-            <h3>Languages</h3>
-            <p>Core languages for backend logic, scripting, and data work.</p>
-            <ul class="tag-list">
-              <li>Python</li><li>JavaScript</li><li>SQL</li><li>Node.js</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon icon-coral"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
-            <h3>AI &amp; Applied ML</h3>
-            <p>Retrieval, agents, and generative models wired into real products.</p>
-            <ul class="tag-list">
-              <li>LangChain</li><li>AI Agents</li><li>RAG Pipelines</li><li>Gemini API</li><li>GPT-4o</li><li>Generative AI</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon icon-teal"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
-            <h3>Backend Engineering</h3>
-            <p>APIs and data layers built to stay fast under real load.</p>
-            <ul class="tag-list">
-              <li>FastAPI</li><li>Microservices</li><li>PostgreSQL</li><li>MongoDB</li><li>Redis</li><li>REST APIs</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon icon-yellow"><i class="fa-solid fa-cloud" aria-hidden="true"></i></div>
-            <h3>Cloud &amp; DevOps</h3>
-            <p>Shipping and running services reliably in production.</p>
-            <ul class="tag-list">
-              <li>AWS</li><li>Docker</li><li>Git</li><li>Linux</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ EXPERIENCE ============ -->
-    <section class="section" id="experience">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Where I've worked</p>
-          <h2 class="section-title">Work experience</h2>
-        </div>
-
-        <ol class="timeline">
-          <li class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-card">
-              <p class="timeline-date">May 2025 &ndash; Present</p>
-              <h3>Python Developer</h3>
-              <p class="timeline-org">Accepto Technologies &middot; Kolkata, IN</p>
-              <ul>
-                <li>Designed and integrated AI-driven backends using FastAPI and LangChain, generating over 30% efficiency gains in workflow automation.</li>
-                <li>Maintained high-throughput REST APIs on AWS (EC2, S3, Lambda) serving 10K+ daily requests with a verified 99.9% uptime record.</li>
-                <li>Developed microservices architecture backed by PostgreSQL and high-performance caching via Redis.</li>
-                <li>Implemented contextual RAG (Retrieval-Augmented Generation) document search pipelines with LangChain.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
-            <div class="timeline-card">
-              <p class="timeline-date">June 2024 &ndash; March 2025</p>
-              <h3>Site Engineer</h3>
-              <p class="timeline-org">ORC Engineering Pvt. Ltd. &middot; West Bengal, IN</p>
-              <ul>
-                <li>Directed cross-functional onsite teams and coordinated resource distribution for project execution tasks.</li>
-                <li>Optimized timeline coordination, managing contractor communications and end-to-end site inspection workflows.</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ============ PROJECTS ============ -->
-    <section class="section section-alt" id="projects">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Selected work</p>
-          <h2 class="section-title">Featured projects</h2>
-          <p class="section-subtitle">A few things I've built recently — all with write-ups and code on GitHub.</p>
-        </div>
-
-        <div class="work-grid">
-          <article class="work-card">
-            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="work-link" aria-label="View Gemini Image Analyzer on GitHub">
-              <div class="work-media work-media-code icon-violet-bg">
-                <i class="fa-solid fa-image" aria-hidden="true"></i>
-                <span class="work-overlay">
-                  <span class="work-overlay-tag">Jan &ndash; Mar 2026</span>
-                  <span class="work-overlay-title">Gemini Image Analyzer</span>
-                  <span class="work-overlay-cta">View on GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></span>
-                </span>
-              </div>
-            </a>
-            <div class="work-meta">
-              <h3>Gemini Image Analyzer</h3>
-              <p>Production-grade microservice exposing a FastAPI POST endpoint to parse and analyze base64-encoded image payloads, built with the Gemini API.</p>
-              <ul class="tag-list tag-list-compact">
-                <li>FastAPI</li><li>Gemini API</li><li>Docker</li><li>CI/CD</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="work-card">
-            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="work-link" aria-label="View YouTube Idea Generator on GitHub">
-              <div class="work-media work-media-code icon-coral-bg">
-                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-                <span class="work-overlay">
-                  <span class="work-overlay-tag">Oct &ndash; Dec 2025</span>
-                  <span class="work-overlay-title">YouTube Idea Generator</span>
-                  <span class="work-overlay-cta">View on GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></span>
-                </span>
-              </div>
-            </a>
-            <div class="work-meta">
-              <h3>YouTube Idea Generator</h3>
-              <p>Agentic workflow that pulls channel data, runs thumbnail analytics through GPT-4o Vision, and writes 30 content ideas to Airtable for under $1 per run.</p>
-              <ul class="tag-list tag-list-compact">
-                <li>n8n</li><li>GPT-4o</li><li>Apify</li><li>Airtable</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="work-card">
-            <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" class="work-link" aria-label="View Trackify AI Job Tracker on GitHub">
-              <div class="work-media work-media-code icon-teal-bg">
-                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
-                <span class="work-overlay">
-                  <span class="work-overlay-tag">Apr &ndash; Jul 2026</span>
-                  <span class="work-overlay-title">Trackify &mdash; AI Job Tracker</span>
-                  <span class="work-overlay-cta">View on GitHub <i class="fa-brands fa-github" aria-hidden="true"></i></span>
-                </span>
-              </div>
-            </a>
-            <div class="work-meta">
-              <h3>Trackify &mdash; AI Job Tracker</h3>
-              <p>An intelligent job-tracking database using RAG context indexing to automatically match uploaded resumes with targeted job postings.</p>
-              <ul class="tag-list tag-list-compact">
-                <li>FastAPI</li><li>LangChain</li><li>Docker</li><li>AWS</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ EDUCATION & CERTIFICATIONS ============ -->
-    <section class="section" id="education">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Background</p>
-          <h2 class="section-title">Education &amp; certifications</h2>
-        </div>
-
-        <div class="edu-grid">
-          <div class="edu-card edu-card-main">
-            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-            <p class="edu-date">2020 &ndash; 2024</p>
-            <h3>B.Tech in Metallurgical Engineering</h3>
-            <p class="timeline-org">National Institute of Technology (NIT), Durgapur &middot; CGPA 7.0 / 10.0</p>
-            <p>Published peer-reviewed research analyzing corrosion-resistant alloy compositions.</p>
-          </div>
-
-          <a class="edu-card edu-card-cert" href="https://www.kaggle.com/certification/badges/dipayanmahato/105" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-            <p class="edu-date">Dec 2025</p>
-            <h3>5-Day AI Agents Intensive</h3>
-            <p class="timeline-org">Google <i class="fa-solid fa-arrow-up-right-from-square cert-link-icon" aria-hidden="true"></i></p>
-          </a>
-
-          <a class="edu-card edu-card-cert" href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_43M4hTekSb9rtPaPs_1766506197983_completion_certificate.pdf" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-            <p class="edu-date">Dec 2025</p>
-            <h3>Solutions Architecture Job Simulation</h3>
-            <p class="timeline-org">Amazon Web Services (AWS) <i class="fa-solid fa-arrow-up-right-from-square cert-link-icon" aria-hidden="true"></i></p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="section contact" id="contact">
-      <div class="container">
-        <div class="contact-panel">
-          <div class="contact-copy">
-            <p class="eyebrow eyebrow-light">Get in touch</p>
-            <h2 class="section-title text-on-dark">Open to full-time roles.<br />Let's talk.</h2>
-            <p class="contact-lead">
-              I'm currently open to full-time Backend Engineering and Applied AI opportunities.
-              Whether you have a role in mind, want to talk system architecture, or just want to
-              connect — reach out below.
-            </p>
-
-            <ul class="contact-info-list">
-              <li>
-                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                <a href="mailto:dipayanmahato9733@gmail.com">dipayanmahato9733@gmail.com</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                <a href="tel:+916295623329">+91 62956 23329</a>
-              </li>
-              <li>
-                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                <span>Kolkata, WB, India</span>
-              </li>
-            </ul>
-
-            <div class="hero-social contact-social" aria-label="Social links">
-              <a href="https://linkedin.com/in/dipayan-mahato-5a1551262" target="_blank" rel="noopener noreferrer" aria-label="Dipayan Mahato on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-              <a href="https://github.com/dipayan3203" target="_blank" rel="noopener noreferrer" aria-label="Dipayan Mahato on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-            </div>
-          </div>
-
-          <form class="contact-form" id="contactForm" novalidate>
-            <h2 class="visually-hidden">Contact form</h2>
-
-            <div class="form-row">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" autocomplete="name" required />
-            </div>
-
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" autocomplete="email" required />
-            </div>
-
-            <div class="form-row">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">
-              Send Message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-            </button>
-
-            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ============ FOOTER ============ -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <a href="#top" class="logo logo-footer" aria-label="Dipayan Mahato — home">
-        <span class="logo-mark">&lt;DM/&gt;</span>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-logo">&lt;<span>DM</span> /&gt;</div>
+      <p class="footer-text">© 2026 Dipayan Mahato. Built with <i class="fas fa-heart" style="color:#c45a6b;"></i> and Python.</p>
+      <a href="#hero" class="footer-back-to-top">
+        Back to top
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
       </a>
+    </footer>
+  </div>
 
-      <nav aria-label="Footer">
-        <ul class="footer-nav">
-          <li><a href="#about">About</a></li>
-          <li><a href="#stack">Stack</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- Alert popup -->
+  <div class="form-alert" id="form-alert">
+    <span class="form-alert-icon">✓</span>
+    <span id="form-alert-message">Message sent!</span>
+  </div>
 
-      <p class="footer-copy">&copy; <span id="footerYear">2026</span> Dipayan Mahato. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-  </button>
-
-  <script src="js/script.js"></script>
+  <!-- JavaScript -->
+  <script src="js/github.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/particles.js" defer></script>
 </body>
 </html>
