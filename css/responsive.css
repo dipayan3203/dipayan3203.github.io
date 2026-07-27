@@ -1,194 +1,491 @@
-/* ========================================
-   responsive.css - Media Queries
-   Mobile-first responsive design
-   ======================================== */
+/* =====================================================
+   LARGE LAPTOPS (1400px and below)
+===================================================== */
 
-/* ----- Tablet & Small Laptops ----- */
-@media (max-width: 1024px) {
-  .container {
-    padding: 1.8rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.8rem;
-  }
+@media (max-width: 1400px){
+
+    .container{
+        width:min(94%,1200px);
+    }
+
+    .hero-grid{
+        gap:50px;
+    }
+
 }
 
-/* ----- Mobile Landscape & Tablets ----- */
-@media (max-width: 768px) {
-  body {
-    padding: 1.5rem 1rem;
-  }
-  
-  .container {
-    padding: 1.5rem;
-    border-radius: 2rem;
-  }
-  
-  .hero {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .hero-content {
-    flex: 1 1 100%;
-    text-align: center;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .hero-cta {
-    justify-content: center;
-  }
-  
-  .code-console {
-    flex: 1 1 100%;
-    transform: rotate(0deg);
-    max-width: 100%;
-  }
-  
-  .code-console:hover {
-    transform: scale(1.01);
-  }
-  
-  h2 {
-    font-size: 1.6rem;
-    padding-left: 0.8rem;
-  }
-  
-  .grid-2col {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-  }
-  
-  .card {
-    padding: 1.2rem;
-  }
-  
-  .contact-form {
-    padding: 1.5rem;
-  }
+/* =====================================================
+   LAPTOPS (1200px and below)
+===================================================== */
+
+@media (max-width:1200px){
+
+    section{
+        padding:100px 0;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:70px;
+        text-align:center;
+    }
+
+    .hero-content p{
+        margin:auto;
+    }
+
+    .hero-buttons,
+    .hero-social{
+        justify-content:center;
+    }
+
+    .hero-console{
+        max-width:760px;
+        margin:auto;
+        transform:none;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stack-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
 }
 
-/* ----- Mobile Portrait ----- */
-@media (max-width: 480px) {
-  body {
-    padding: 1rem 0.8rem;
-  }
-  
-  .container {
-    padding: 1rem;
-    border-radius: 1.5rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  
-  .hero-sub {
-    font-size: 1rem;
-  }
-  
-  .grid-2col {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .btn {
-    padding: 0.5rem 1.4rem;
-    font-size: 0.85rem;
-  }
-  
-  .code-console {
-    padding: 1.2rem 1rem;
-  }
-  
-  .console-code {
-    font-size: 0.7rem;
-    padding: 0.8rem;
-  }
-  
-  .chip {
-    font-size: 0.6rem;
-    padding: 0.2rem 0.8rem;
-  }
-  
-  h2 {
-    font-size: 1.3rem;
-    padding-left: 0.6rem;
-  }
-  
-  .form-input, .form-textarea {
-    padding: 0.6rem 0.8rem;
-    font-size: 0.9rem;
-  }
-  
-  .btn-submit {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.9rem;
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .form-alert {
-    bottom: 20px;
-    right: 20px;
-    left: 20px;
-    padding: 0.8rem 1.2rem;
-    font-size: 0.9rem;
-    text-align: center;
-  }
-  
-  .footer-logo {
-    font-size: 1.1rem;
-  }
-  
-  .footer-text {
-    font-size: 0.8rem;
-  }
+/* =====================================================
+   TABLETS (992px and below)
+===================================================== */
+
+@media (max-width:992px){
+
+    .nav-links{
+
+        position:fixed;
+
+        top:80px;
+
+        right:-100%;
+
+        width:280px;
+
+        height:calc(100vh - 80px);
+
+        background:#111;
+
+        flex-direction:column;
+
+        padding:40px;
+
+        gap:25px;
+
+        transition:.35s;
+
+        border-left:1px solid rgba(255,255,255,.08);
+
+    }
+
+    .nav-links.active{
+        right:0;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-social{
+        display:none;
+    }
+
+    .timeline::before{
+        left:25px;
+    }
+
+    .timeline-item{
+        width:100%;
+        left:0 !important;
+        padding-left:70px;
+        padding-right:0;
+        margin-bottom:40px;
+    }
+
+    .timeline-dot{
+        left:17px !important;
+        right:auto;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
 }
 
-/* ----- Small Mobile (under 360px) ----- */
-@media (max-width: 360px) {
-  .hero-content h1 {
-    font-size: 1.6rem;
-  }
-  
-  .badge {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.8rem;
-  }
-  
-  .container {
-    padding: 0.8rem;
-  }
+/* =====================================================
+   MOBILE DEVICES (768px and below)
+===================================================== */
+
+@media (max-width:768px){
+
+    section{
+        padding:80px 0;
+    }
+
+    .hero-content h1{
+        font-size:2.8rem;
+    }
+
+    .hero-content h2{
+        font-size:1.25rem;
+    }
+
+    .hero-console{
+
+        overflow:auto;
+
+        font-size:.85rem;
+
+    }
+
+    .about-highlights{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .stack-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .projects-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .education-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #github-projects{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+   /* =====================================================
+   SMALL MOBILE DEVICES (576px and below)
+===================================================== */
+
+@media (max-width:576px){
+
+    html{
+        font-size:15px;
+    }
+
+    .container{
+        width:92%;
+    }
+
+    .navbar{
+        padding:14px 0;
+    }
+
+    .logo{
+        font-size:1.3rem;
+    }
+
+    .hero-content h1{
+        font-size:2.3rem;
+    }
+
+    .hero-content h2{
+        font-size:1.05rem;
+    }
+
+    .hero-content p{
+        font-size:.96rem;
+    }
+
+    .hero-tag{
+        font-size:.78rem;
+        padding:8px 16px;
+    }
+
+    .hero-console{
+
+        border-radius:18px;
+
+    }
+
+    .hero-console pre{
+
+        padding:18px;
+
+    }
+
+    .hero-console code{
+
+        font-size:.78rem;
+
+        line-height:1.6;
+
+    }
+
+    .floating-chip{
+
+        font-size:.72rem;
+
+        padding:8px 12px;
+
+    }
+
+    .section-title h2{
+
+        font-size:2rem;
+
+    }
+
+    .highlight-card,
+    .skill-box,
+    .stack-card,
+    .project-card,
+    .education-card{
+
+        padding:24px;
+
+    }
+
+    .project-links{
+
+        flex-direction:column;
+
+    }
+
+    .project-links a{
+
+        width:100%;
+
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+
+        padding:16px;
+
+    }
+
+    .footer-social{
+
+        flex-wrap:wrap;
+
+    }
+
+    #scrollTop{
+
+        right:18px;
+
+        bottom:18px;
+
+        width:48px;
+
+        height:48px;
+
+    }
+
 }
 
-/* ----- Print Styles ----- */
-@media print {
-  body {
-    background: white;
-    padding: 0.5in;
-  }
-  
-  .container {
-    box-shadow: none;
-    background: white;
-    border-radius: 0;
-  }
-  
-  .code-console {
-    background: #f5f5f5;
-    border: 1px solid #ddd;
-  }
-  
-  .btn, .btn-submit {
-    display: none;
-  }
-  
-  .hero-cta {
-    display: none;
-  }
+/* =====================================================
+   EXTRA SMALL DEVICES (400px and below)
+===================================================== */
+
+@media (max-width:400px){
+
+    html{
+        font-size:14px;
+    }
+
+    .hero-content h1{
+
+        font-size:2rem;
+
+    }
+
+    .hero-buttons{
+
+        gap:12px;
+
+    }
+
+    .btn{
+
+        padding:14px 22px;
+
+    }
+
+    .nav-links{
+
+        width:100%;
+
+    }
+
+    .timeline-item{
+
+        padding-left:55px;
+
+    }
+
+    .timeline::before{
+
+        left:18px;
+
+    }
+
+    .timeline-dot{
+
+        left:10px !important;
+
+    }
+
+}
+
+/* =====================================================
+   LARGE DISPLAYS (1600px+)
+===================================================== */
+
+@media (min-width:1600px){
+
+    .container{
+
+        max-width:1400px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:6rem;
+
+    }
+
+    .hero-console{
+
+        transform:rotate(-8deg) scale(1.08);
+
+    }
+
+}
+
+/* =====================================================
+   LANDSCAPE PHONES
+===================================================== */
+
+@media (max-height:600px) and (orientation:landscape){
+
+    #hero{
+
+        min-height:auto;
+
+        padding:140px 0 80px;
+
+    }
+
+}
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+/* =====================================================
+   DARK MODE SUPPORT
+===================================================== */
+
+@media (prefers-color-scheme:dark){
+
+    body{
+
+        background:#09090B;
+
+    }
+
+}
+
+/* =====================================================
+   PRINT
+===================================================== */
+
+@media print{
+
+    header,
+    #particles-js,
+    #scrollTop,
+    .hero-social,
+    .hero-buttons,
+    .contact-form,
+    .footer-social{
+
+        display:none !important;
+
+    }
+
+    body{
+
+        background:#fff;
+
+        color:#000;
+
+    }
+
+    section{
+
+        padding:30px 0;
+
+        page-break-inside:avoid;
+
+    }
+
+    a{
+
+        color:#000;
+
+        text-decoration:none;
+
+    }
+
+}
+
 }
