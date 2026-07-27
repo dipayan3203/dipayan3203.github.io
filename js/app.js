@@ -510,4 +510,4 @@ if (typeof loadGithubProjects === "function") {
 
 }
 
-}
+
