@@ -395,3 +395,206 @@ if (menuButton && navLinks) {
         });
 
 }
+/* ==========================================================
+   Contact Form
+========================================================== */
+
+function initContactForm() {
+
+    const form = document.querySelector("#contactForm");
+
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+
+        const name =
+            form.querySelector('input[name="name"]');
+
+        const email =
+            form.querySelector('input[name="email"]');
+
+        const message =
+            form.querySelector('textarea[name="message"]');
+
+        if (
+            !name.value.trim() ||
+            !email.value.trim() ||
+            !message.value.trim()
+        ) {
+
+            e.preventDefault();
+
+            alert("Please fill in all fields.");
+
+            return;
+
+        }
+
+        const emailRegex =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(email.value)) {
+
+            e.preventDefault();
+
+            alert("Please enter a valid email.");
+
+            return;
+
+        }
+
+    });
+
+}
+
+/* ==========================================================
+   Scroll To Top
+========================================================== */
+
+function createScrollButton() {
+
+    const button = document.createElement("button");
+
+    button.id = "scrollTop";
+
+    button.innerHTML =
+        '<i class="fas fa-arrow-up"></i>';
+
+    document.body.appendChild(button);
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 400) {
+
+            button.classList.add("show");
+
+        } else {
+
+            button.classList.remove("show");
+
+        }
+
+    });
+
+    button.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+createScrollButton();
+
+/* ==========================================================
+   Hero Parallax
+========================================================== */
+
+const hero = document.querySelector(".hero");
+
+if (hero) {
+
+    window.addEventListener("mousemove", e => {
+
+        const x =
+            (window.innerWidth / 2 - e.clientX) / 40;
+
+        const y =
+            (window.innerHeight / 2 - e.clientY) / 40;
+
+        const consoleCard =
+            document.querySelector(".hero-console");
+
+        if (consoleCard) {
+
+            consoleCard.style.transform =
+                `rotate(-4deg) translate(${x}px,${y}px)`;
+
+        }
+
+    });
+
+}
+
+/* ==========================================================
+   Fade Utility
+========================================================== */
+
+document.querySelectorAll("[data-fade]")
+    .forEach((element, index) => {
+
+        element.style.animationDelay =
+            `${index * 0.15}s`;
+
+});
+
+/* ==========================================================
+   Keyboard Accessibility
+========================================================== */
+
+document.addEventListener("keyup", e => {
+
+    if (e.key === "Escape") {
+
+        if (navLinks) {
+
+            navLinks.classList.remove("active");
+
+        }
+
+    }
+
+});
+
+/* ==========================================================
+   Console Greeting
+========================================================== */
+
+console.log(
+`
+===========================================
+ Dipayan Mahato Portfolio
+ Python Developer & Applied AI Engineer
+ https://github.com/dipayan3203
+===========================================
+`
+);
+
+/* ==========================================================
+   Performance
+========================================================== */
+
+window.addEventListener("load", () => {
+
+    document.body.classList.add("loaded");
+
+});
+
+/* ==========================================================
+   Resize Handler
+========================================================== */
+
+window.addEventListener("resize", () => {
+
+    if (
+
+        window.innerWidth > 768 &&
+        navLinks
+
+    ) {
+
+        navLinks.classList.remove("active");
+
+    }
+
+});
+
+/* ==========================================================
+   End of app.js
+========================================================== */
