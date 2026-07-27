@@ -1,0 +1,256 @@
+/* ========================================
+   animations.css - Animations & Transitions
+   Keyframes, scroll reveals, hover effects
+   ======================================== */
+
+/* ----- Fade In Animations ----- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ----- Hero Specific Animations ----- */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* ----- Console Code Typing Effect ----- */
+.console-code {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.console-code .cmt {
+  animation: fadeInLeft 0.5s ease-out 0.2s both;
+}
+
+/* ----- Stack Chips Entrance ----- */
+.stack-chips .chip:nth-child(1) {
+  animation: fadeInUp 0.4s ease-out 0.3s both;
+}
+.stack-chips .chip:nth-child(2) {
+  animation: fadeInUp 0.4s ease-out 0.5s both;
+}
+.stack-chips .chip:nth-child(3) {
+  animation: fadeInUp 0.4s ease-out 0.7s both;
+}
+.stack-chips .chip:nth-child(4) {
+  animation: fadeInUp 0.4s ease-out 0.9s both;
+}
+
+/* ----- Scroll Reveal Classes ----- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ----- Card Hover Animations ----- */
+.card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+
+/* ----- Button Hover Effects ----- */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* ----- Gradient Border Animation ----- */
+.glow-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(107, 76, 122, 0.1), rgba(196, 90, 107, 0.1));
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.glow-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 28px;
+  padding: 2px;
+  background: linear-gradient(135deg, #6b4c7a, #c45a6b, #2b8c7c);
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: shimmer 6s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* ----- Floating Animation ----- */
+.float-element {
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-element-delay-1 {
+  animation-delay: 0.5s;
+}
+.float-element-delay-2 {
+  animation-delay: 1s;
+}
+.float-element-delay-3 {
+  animation-delay: 1.5s;
+}
+
+/* ----- Page Load Animation ----- */
+.page-loader {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* ----- Section Transitions ----- */
+.section {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.section:nth-child(1) { animation-delay: 0.1s; }
+.section:nth-child(2) { animation-delay: 0.3s; }
+.section:nth-child(3) { animation-delay: 0.5s; }
+.section:nth-child(
