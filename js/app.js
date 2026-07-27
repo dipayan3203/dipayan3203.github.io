@@ -509,5 +509,3 @@ if (typeof loadGithubProjects === "function") {
     loadGithubProjects();
 
 }
-
-
