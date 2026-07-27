@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1307049706,
+    "name": "PhantomBlock",
+    "full_name": "dipayan3203/PhantomBlock",
+    "html_url": "https://github.com/dipayan3203/PhantomBlock",
+    "description": "A blockchain-based phantom block explorer",
+    "language": "JavaScript",
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "updated_at": "2026-07-22T10:00:36Z"
+  },
+  {
+    "id": 1309115681,
+    "name": "Swift-Pay",
+    "full_name": "dipayan3203/Swift-Pay",
+    "html_url": "https://github.com/dipayan3203/Swift-Pay",
+    "description": "Fast and secure payment processing system",
+    "language": "Python",
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "updated_at": "2026-07-26T19:01:20Z"
+  },
+  {
+    "id": 1266075425,
+    "name": "scrape-and-serve",
+    "full_name": "dipayan3203/scrape-and-serve",
+    "html_url": "https://github.com/dipayan3203/scrape-and-serve",
+    "description": "Web scraping and serving API",
+    "language": "PHP",
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "updated_at": "2026-07-18T13:04:30Z"
+  },
+  {
+    "id": 1266063976,
+    "name": "Image-Analyzer",
+    "full_name": "dipayan3203/Image-Analyzer",
+    "html_url": "https://github.com/dipayan3203/Image-Analyzer",
+    "description": "AI-powered image analysis and processing",
+    "language": "Python",
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "updated_at": "2026-07-14T13:58:01Z"
+  },
+  {
+    "id": 1301866100,
+    "name": "Assistant",
+    "full_name": "dipayan3203/Assistant",
+    "html_url": "https://github.com/dipayan3203/Assistant",
+    "description": "AI assistant with FastAPI backend",
+    "language": "HTML",
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "updated_at": "2026-07-17T08:19:55Z"
+  },
+  {
+    "id": 1266743610,
+    "name": "trackify",
+    "full_name": "dipayan3203/trackify",
+    "html_url": "https://github.com/dipayan3203/trackify",
+    "description": "Real-time tracking and analytics platform",
+    "language": "JavaScript",
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "updated_at": "2026-07-08T19:15:41Z"
+  }
+]
