@@ -12,7 +12,7 @@ const REPO_GRID = document.getElementById('repo-grid');
  */
 async function fetchGitHubRepos() {
   try {
-    const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`);
+    const response = await fetch(`https://api.github.com/users/${dipayan3203}/repos?sort=updated&per_page=6`);
     
     if (!response.ok) {
       throw new Error(`GitHub API error: ${response.status}`);
