@@ -1,495 +1,365 @@
-# Dipayan Mahato - Portfolio
+# 🚀 Dipayan Mahato Portfolio
 
-> Python Developer & Applied AI Engineer
+A modern developer portfolio built for **Dipayan Mahato**, showcasing Python backend development, Applied AI engineering, FastAPI projects, and modern web design.
 
-[![Website](https://img.shields.io/badge/website-dipayan3203.vercel.app-blue)](https://dipayan3203.vercel.app)
-[![GitHub](https://img.shields.io/badge/github-dipayan3203-6b4c7a)](https://github.com/dipayan3203)
-[![Made with](https://img.shields.io/badge/made%20with-❤️-red)](https://github.com/dipayan3203)
+The website is designed with a premium glassmorphism UI, responsive layouts, smooth animations, GitHub integration, and an interactive developer-console hero section.
 
-## 🚀 Features
+---
 
-- **Dynamic GitHub Integration** - Automatically fetches latest repositories from GitHub API
-- **Working Contact Form** - Powered by Formspree for message delivery
-- **Interactive Code Console** - Rotated code display with floating tech chips
-- **Responsive Design** - Optimized for all screen sizes
-- **Particle Background** - Interactive canvas animation (desktop only)
-- **Scroll Animations** - Smooth reveal effects on scroll
-- **Accessibility** - Keyboard navigation and semantic HTML
-- **Performance Optimized** - Lazy loading, deferred scripts, and efficient CSS
+# 🌐 Live Features
 
-## 📁 Project Structure
+- Responsive Design
+- Glassmorphism UI
+- Animated Hero Section
+- Interactive Code Console
+- GitHub Repository Integration
+- Particle Background
+- Scroll Animations
+- Typing Animation
+- Timeline Experience Section
+- Tech Stack Section
+- Featured Projects
+- Contact Form
+- SEO Optimized
+- Fast Loading
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Font Awesome
+- AOS Animation Library
+- Particles.js
+
+## Backend (Projects)
+
+- Python
+- FastAPI
+- PostgreSQL
+- SQLAlchemy
+- Alembic
+- Docker
+- Redis
+- JWT Authentication
+
+## AI
+
+- LangChain
+- Gemini API
+- RAG
+- LLM Applications
+- Prompt Engineering
+
+---
+
+# 📁 Folder Structure
+
+```
 portfolio/
-├── index.html # Main entry point
+
+│
+├── index.html
+│
 ├── css/
-│ ├── style.css # Core styling
-│ ├── responsive.css # Media queries
-│ └── animations.css # Animations & transitions
+│   ├── style.css
+│   ├── responsive.css
+│   └── animations.css
+│
 ├── js/
-│ ├── app.js # Main application logic
-│ ├── github.js # GitHub API integration
-│ └── particles.js # Particle background effect
+│   ├── app.js
+│   ├── github.js
+│   └── particles.js
+│
 ├── data/
-│ └── projects.json # Fallback project data
+│   └── projects.json
+│
 ├── assets/
-│ ├── images/ # Optimized images
-│ ├── icons/ # SVG icons
-│ └── resume.pdf # Downloadable resume
-└── README.md # This file
+│   ├── images/
+│   ├── icons/
+│   └── favicon/
+│
+└── README.md
+```
 
-text
+---
 
-## 🔧 Technologies Used
+# ⚙ Installation
 
-### Frontend
-- HTML5, CSS3, JavaScript (ES6+)
-- Google Fonts: Poppins, Lato, JetBrains Mono
-- Font Awesome 6 for icons
+Clone the repository
 
-### APIs & Services
-- **GitHub API** - Live repository data
-- **Formspree** - Contact form handling
-
-### Design System
-- **Color Palette**: Violet (#6b4c7a), Coral (#c45a6b), Teal (#2b8c7c)
-- **Typography**: Poppins (display), Lato (body), JetBrains Mono (code)
-- **Glassmorphism** with backdrop blur effects
-- **Gradient accents** for primary elements
-
-## 🚦 Getting Started
-
-### Local Development
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/dipayan3203/dipayan3203.github.io.git
-cd dipayan3203.github.io
-Open index.html in your browser or use a local server:
+git clone https://github.com/dipayan3203/portfolio.git
+```
 
-bash
-# Using Python
-python -m http.server 8000
+Open the folder
 
-# Using Node.js
-npx serve
-Visit http://localhost:8000 to view the portfolio.
+```bash
+cd portfolio
+```
 
-Customization
-Update Formspree Endpoint
-In index.html, replace the form action URL:
+Open
 
-html
-<form action="https://formspree.io/f/your-form-id" method="POST">
-Change GitHub Username
-In js/github.js, update the username constant:
+```
+index.html
+```
 
-javascript
-const GITHUB_USERNAME = 'your-username';
-Modify Color Palette
-In css/style.css, update the CSS variables:
+or use
 
-css
-:root {
-  --violet: #6b4c7a;
-  --coral: #c45a6b;
-  --teal: #2b8c7c;
-}
-🎨 Design Philosophy
-The portfolio is designed to be:
+```bash
+Live Server
+```
 
-Modern - Using current design trends (glassmorphism, gradients, animations)
+inside VS Code.
 
-Professional - Clean typography and consistent spacing
+---
 
-Personal - Unique code console element reflects developer identity
+# 💻 Local Development
 
-Functional - All interactive elements work as expected
+No build tools are required.
 
-📊 Performance
-Lighthouse Score: 90+ (target)
+Simply open
 
-First Paint: < 1.5s
+```
+index.html
+```
 
-Time to Interactive: < 3s
+or use
 
-Bundle Size: < 100KB (minified)
+```
+Live Server
+```
 
-🌐 Browser Support
-Chrome (latest)
+for automatic reload.
 
-Firefox (latest)
+---
 
-Safari (latest)
+# 🌍 Deployment
 
-Edge (latest)
+## GitHub Pages
 
-Mobile browsers (iOS Safari, Android Chrome)
+Push your project
 
-📝 License
-MIT License - feel free to use this for your own portfolio!
+```bash
+git add .
 
-🤝 Connect
-GitHub: dipayan3203
+git commit -m "Deploy portfolio"
 
-LinkedIn: Dipayan Mahato
+git push origin main
+```
 
-Twitter: @dipayan3203
+Go to
 
-Built with ❤️ and Python 🐍
+```
+Settings
 
-text
+↓
 
-## 📄 File 10: robots.txt
-robots.txt - Search Engine Crawler Directives
-Allow all bots to crawl the entire site
-User-agent: *
-Allow: /
+Pages
 
-Sitemap location
-Sitemap: https://dipayan3203.vercel.app/sitemap.xml
+↓
 
-Prevent crawling of specific directories (if needed)
-Disallow: /assets/
-Disallow: /admin/
-text
+Deploy from Branch
 
-## 📄 File 11: sitemap.xml
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://dipayan3203.vercel.app/</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://dipayan3203.vercel.app/#about</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dipayan3203.vercel.app/#techstack</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dipayan3203.vercel.app/#projects</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dipayan3203.vercel.app/#contact</loc>
-    <priority>0.7</priority>
-  </url>
-</urlset>
-📄 File 12: .htaccess (Apache Configuration)
-apache
-# .htaccess - Apache Server Configuration
-# Security headers and optimization
+↓
 
-# Enable Gzip Compression
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
-</IfModule>
+main
 
-# Cache Control
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType text/javascript "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType font/woff2 "access plus 1 year"
-</IfModule>
+↓
 
-# Security Headers
-<IfModule mod_headers.c>
-  # Prevent MIME type sniffing
-  Header set X-Content-Type-Options "nosniff"
-  
-  # Prevent clickjacking
-  Header set X-Frame-Options "DENY"
-  
-  # Enable XSS protection
-  Header set X-XSS-Protection "1; mode=block"
-  
-  # Referrer policy
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
-  
-  # Content Security Policy
-  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://formspree.io;"
-</IfModule>
+Save
+```
 
-# Redirect to HTTPS (if SSL is enabled)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+Your site will be available at
 
-# 404 Error Page
-ErrorDocument 404 /404.html
+```
+https://YOUR_USERNAME.github.io/
+```
 
-# Prevent directory listing
-Options -Indexes
+---
 
-# Custom Error Pages
-ErrorDocument 404 /404.html
-ErrorDocument 500 /500.html
-📄 File 13: 404.html
-html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 - Page Not Found | Dipayan Mahato</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Lato', sans-serif;
-      background: #f6f2fa;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 2rem;
-    }
-    .error-container {
-      max-width: 600px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(4px);
-      padding: 3rem 2.5rem;
-      border-radius: 2rem;
-      box-shadow: 0 20px 40px -12px rgba(30, 20, 40, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-    }
-    .error-code {
-      font-family: 'Poppins', sans-serif;
-      font-size: 6rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, #6b4c7a, #c45a6b);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-    }
-    h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.8rem;
-      color: #2d1b3d;
-      margin: 1rem 0 0.5rem;
-    }
-    p {
-      color: #5d4a6e;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-    .btn {
-      display: inline-block;
-      background: #2d1b3d;
-      color: white;
-      padding: 0.7rem 2rem;
-      border-radius: 60px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.3s;
-      font-family: 'Poppins', sans-serif;
-    }
-    .btn:hover {
-      background: #4a2e5e;
-      transform: scale(1.02);
-    }
-    .emoji {
-      font-size: 3rem;
-      display: block;
-      margin-top: 0.5rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="error-container">
-    <div class="error-code">404</div>
-    <h1>Page Not Found</h1>
-    <p>Oops! The page you're looking for doesn't exist or has been moved.</p>
-    <a href="/" class="btn">← Back to Home</a>
-    <span class="emoji">🚀</span>
-  </div>
-</body>
-</html>
-📄 File 14: .gitignore
-gitignore
-# .gitignore - Files to exclude from version control
+# 📧 Contact Form Setup
 
-# OS files
-.DS_Store
-Thumbs.db
-desktop.ini
+The contact form is configured for **Formspree**.
 
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+1. Create a Formspree account.
+2. Create a new form.
+3. Copy the endpoint.
 
-# Build output
-dist/
-build/
-*.min.js
-*.min.css
+Example:
 
-# Dependency directories
-node_modules/
-bower_components/
+```
+https://formspree.io/f/xxxxxxxx
+```
 
-# Log files
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+Replace the `<form action="">` in `index.html` with your endpoint:
 
-# Environment variables
-.env
-.env.local
-.env.production
+```html
+<form
+    action="https://formspree.io/f/xxxxxxxx"
+    method="POST"
+>
+```
 
-# Large binary files
-*.psd
-*.ai
-*.eps
-*.raw
-*.cr2
-*.nef
-*.zip
-*.tar.gz
+No backend is required.
 
-# Uploaded files
-uploads/
-temp/
+---
 
-# Cache
-.cache/
-.eslintcache
-.prettiercache
+# 🐙 GitHub Integration
 
-# Temporary files
-tmp/
-temp/
+Repository information is loaded automatically using the GitHub REST API.
 
-# Backup files
-*.bak
-*.backup
+Edit
 
-# Resume PDF (tracked separately via Git LFS)
-assets/resume/*.pdf
-!assets/resume/README.md
+```
+js/github.js
+```
 
-# Large images (track optimized versions only)
-assets/images/*.{jpg,png,jpeg,gif}
-!assets/images/*.webp
-!assets/images/*.svg
+Update
 
-# Analytics
-google-analytics.js
-📄 File 15: vercel.json (Vercel Deployment Config)
-json
-{
-  "version": 2,
-  "name": "dipayan-portfolio",
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/404",
-      "dest": "/404.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    },
-    {
-      "source": "/assets/images/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/assets/icons/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/old-path",
-      "destination": "/",
-      "permanent": true
-    }
-  ]
-}
-📁 Complete File Structure Summary
-text
-portfolio/
-├── index.html                 ✅ Main entry point
-├── 404.html                   ✅ Custom error page
-├── robots.txt                 ✅ Search engine directives
-├── sitemap.xml                ✅ SEO sitemap
-├── .htaccess                  ✅ Apache configuration
-├── .gitignore                 ✅ Git ignore rules
-├── vercel.json                ✅ Vercel deployment config
-├── README.md                  ✅ Project documentation
-├── css/
-│   ├── style.css             ✅ Core styles
-│   ├── responsive.css        ✅ Responsive design
-│   └── animations.css        ✅ Animations
-├── js/
-│   ├── app.js               ✅ Main application
-│   ├── github.js            ✅ GitHub API integration
-│   └── particles.js         ✅ Particle effects
-├── data/
-    └── projects.json        ✅ Fallback project data
+```javascript
+const GITHUB_USERNAME = "dipayan3203";
+```
 
-All files are now complete and ready for deployment! 🚀
+---
 
+# 🎨 Color Palette
+
+Primary
+
+```
+#7C3AED
+```
+
+Secondary
+
+```
+#FF6B6B
+```
+
+Accent
+
+```
+#14B8A6
+```
+
+Background
+
+```
+#09090B
+```
+
+---
+
+# 🔤 Fonts
+
+Display
+
+```
+Poppins
+```
+
+Body
+
+```
+Lato
+```
+
+Code
+
+```
+JetBrains Mono
+```
+
+---
+
+# 📂 Featured Projects
+
+- Swift Pay
+- AI Image Analyzer
+- Trackify
+
+These can be managed from
+
+```
+data/projects.json
+```
+
+without editing HTML.
+
+---
+
+# 📱 Responsive Breakpoints
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+- Small Mobile
+
+Optimized for modern browsers.
+
+---
+
+# 🚀 Future Improvements
+
+- Blog Section
+- Dark / Light Theme Enhancements
+- Project Search
+- GitHub Contribution Graph
+- GitHub Activity Timeline
+- Resume Download Analytics
+- Project Filters
+- Project Screenshots Carousel
+- Testimonials
+- Experience Counters
+- Admin Dashboard
+
+---
+
+# 👨‍💻 Author
+
+**Dipayan Mahato**
+
+Python Developer
+
+Applied AI Engineer
+
+GitHub
+
+https://github.com/dipayan3203
+
+LinkedIn
+
+(Add your LinkedIn profile URL here)
+
+Portfolio
+
+(Add your deployed portfolio URL here)
+
+---
+
+# 📄 License
+
+This project is released under the MIT License.
+
+You may modify and use it for personal purposes.
+
+---
+
+# ⭐ Acknowledgements
+
+- Font Awesome
+- Google Fonts
+- AOS
+- Particles.js
+- GitHub REST API
+- Formspree
+
+---
+
+Made with ❤️ using Python, FastAPI, JavaScript, and AI.
