@@ -1,41 +1,55 @@
-/* =====================================================
-   GITHUB REPOSITORIES
-   Author: Dipayan Mahato Portfolio
-===================================================== */
+/* ==========================================================
+   GitHub Repositories
+   Dipayan Mahato
+========================================================== */
 
 const GITHUB_USERNAME = "dipayan3203";
-const MAX_REPOSITORIES = 6;
+const REPOSITORY_LIMIT = 3;
 
-/* =====================================================
-   LOAD REPOSITORIES
-===================================================== */
+const container = document.getElementById("github-projects");
 
-async function loadGithubProjects() {
-
-    const container = document.getElementById("github-projects");
+async function loadGitHubRepositories() {
 
     if (!container) return;
 
-    container.innerHTML =
-        '<div class="loading">Loading GitHub repositories...</div>';
+    container.innerHTML = `
+        <div class="loading-repos">
+            Loading latest repositories...
+        </div>
+    `;
 
     try {
 
         const response = await fetch(
-            `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=${MAX_REPOSITORIES}`
+            `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`
         );
 
         if (!response.ok) {
-
-            throw new Error("Unable to fetch GitHub repositories.");
-
+            throw new Error("GitHub API Error");
         }
 
         const repositories = await response.json();
 
+        const filtered = repositories
+            .filter(repo => !repo.fork)
+            .sort(
+                (a, b) =>
+                    new Date(b.updated_at) -
+                    new Date(a.updated_at)
+            )
+            .slice(0, REPOSITORY_LIMIT);
+
+        if (!filtered.length) {
+
+            container.innerHTML =
+                "<p>No repositories found.</p>";
+
+            return;
+        }
+
         container.innerHTML = "";
 
-        repositories.forEach(repo => {
+        filtered.forEach(repo => {
 
             container.appendChild(createRepositoryCard(repo));
 
@@ -46,9 +60,17 @@ async function loadGithubProjects() {
         console.error(error);
 
         container.innerHTML = `
-            <div class="github-card">
+            <div class="repo-card">
                 <h3>Unable to load repositories</h3>
-                <p>Please try again later.</p>
+                <p>
+                    GitHub API is currently unavailable
+                    or rate limited.
+                </p>
+
+                <a href="https://github.com/${GITHUB_USERNAME}"
+                   target="_blank">
+                   Visit GitHub →
+                </a>
             </div>
         `;
 
@@ -56,59 +78,78 @@ async function loadGithubProjects() {
 
 }
 
-/* =====================================================
-   REPOSITORY CARD
-===================================================== */
-
 function createRepositoryCard(repo) {
 
-    const card = document.createElement("article");
+    const card = document.createElement("div");
 
-    card.className = "github-card reveal";
+    card.className = "repo-card";
 
-    const description =
-        repo.description ||
-        "No repository description available.";
+    const language = repo.language || "Unknown";
+
+    const updated =
+        new Date(repo.updated_at).toLocaleDateString(
+            "en-IN",
+            {
+                year: "numeric",
+                month: "short",
+                day: "numeric"
+            }
+        );
 
     card.innerHTML = `
 
-        <h4>${escapeHtml(repo.name)}</h4>
+        <h3>
 
-        <p>${escapeHtml(description)}</p>
+            <i class="fab fa-github"></i>
 
-        <div class="repo-meta">
+            ${repo.name}
+
+        </h3>
+
+        <p>
+
+            ${repo.description || "No description available."}
+
+        </p>
+
+        <div class="project-stack">
+
+            <span>${language}</span>
+
+            <span>${repo.visibility}</span>
+
+        </div>
+
+        <div class="repo-footer">
 
             <span>
-                💻 ${repo.language || "N/A"}
-            </span>
 
-            <span>
                 ⭐ ${repo.stargazers_count}
+
             </span>
 
-        </div>
-
-        <div class="repo-meta" style="margin-top:12px;">
-
             <span>
+
                 🍴 ${repo.forks_count}
-            </span>
 
-            <span>
-                👁 ${repo.watchers_count}
             </span>
 
         </div>
 
-        <div style="margin-top:22px;">
+        <div class="repo-footer">
+
+            <span>
+
+                Updated ${updated}
+
+            </span>
 
             <a
                 href="${repo.html_url}"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="btn btn-primary"
             >
-                View Repository
+                View Repository →
             </a>
 
         </div>
@@ -119,119 +160,4 @@ function createRepositoryCard(repo) {
 
 }
 
-/* =====================================================
-   ESCAPE HTML
-===================================================== */
-
-function escapeHtml(text) {
-
-    if (!text) return "";
-
-    const div = document.createElement("div");
-
-    div.textContent = text;
-
-    return div.innerHTML;
-
-}
-
-/* =====================================================
-   OPTIONAL: FEATURED REPOSITORIES
-===================================================== */
-
-async function loadFeaturedRepositories(names = []) {
-
-    if (!Array.isArray(names) || names.length === 0) {
-
-        return;
-
-    }
-
-    const requests = names.map(name =>
-
-        fetch(
-            `https://api.github.com/repos/${GITHUB_USERNAME}/${name}`
-        ).then(response => {
-
-            if (!response.ok) {
-
-                return null;
-
-            }
-
-            return response.json();
-
-        })
-
-    );
-
-    try {
-
-        return await Promise.all(requests);
-
-    } catch (error) {
-
-        console.error(error);
-
-        return [];
-
-    }
-
-}
-
-/* =====================================================
-   GITHUB PROFILE
-===================================================== */
-
-async function loadGithubProfile() {
-
-    try {
-
-        const response = await fetch(
-            `https://api.github.com/users/${GITHUB_USERNAME}`
-        );
-
-        if (!response.ok) {
-
-            return;
-
-        }
-
-        const profile = await response.json();
-
-        const profileName = document.getElementById("github-name");
-        const followers = document.getElementById("github-followers");
-        const following = document.getElementById("github-following");
-        const repositories = document.getElementById("github-repositories");
-
-        if (profileName)
-            profileName.textContent = profile.name;
-
-        if (followers)
-            followers.textContent = profile.followers;
-
-        if (following)
-            following.textContent = profile.following;
-
-        if (repositories)
-            repositories.textContent = profile.public_repos;
-
-    } catch (error) {
-
-        console.error(error);
-
-    }
-
-}
-
-/* =====================================================
-   INITIALIZATION
-===================================================== */
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    loadGithubProjects();
-
-    loadGithubProfile();
-
-});
+loadGitHubRepositories();
