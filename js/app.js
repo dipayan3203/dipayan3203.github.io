@@ -245,6 +245,7 @@ function initScrollTop() {
         });
 
     });
+}
   /* =====================================================
    REVEAL ANIMATIONS
 ===================================================== */
@@ -267,8 +268,9 @@ function initRevealAnimations() {
 
         });
 
-    }, {
-        threshold: 0.15
+    },
+                                                                                
+      { threshold: 0.15
     });
 
     elements.forEach(el => observer.observe(el));
