@@ -105,7 +105,6 @@
     <section class="section" id="projects">
       <h2><i class="fab fa-github" style="margin-right:10px;color:#6b4c7a;"></i> Projects</h2>
       <div id="repo-grid" class="grid-2col">
-        <!-- cards injected by github.js -->
         <div class="card" style="text-align:center;padding:2rem;"><i class="fas fa-spinner fa-pulse" style="font-size:2rem;color:#6b4c7a;"></i><p style="margin-top:0.8rem;">Loading repositories...</p></div>
       </div>
     </section>
@@ -113,20 +112,20 @@
     <!-- ===== CONTACT ===== -->
     <section class="section" id="contact">
       <h2><i class="fas fa-paper-plane" style="margin-right:10px;color:#6b4c7a;"></i> Contact</h2>
-      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mbdeparb" method="POST">
+      <form class="contact-form glow-card scroll-fade delay-100" id="contact-form" action="https://formspree.io/f/mbdeparb" method="POST">
         <div class="form-group">
-          <label class="form-label" for="name">Name</label>
-          <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required>
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
         </div>
         <div class="form-group">
-          <label class="form-label" for="email">Email</label>
-          <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required>
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
         </div>
         <div class="form-group">
-          <label class="form-label" for="message">Message</label>
-          <textarea class="form-textarea" id="message" name="message" placeholder="How can I help?" required></textarea>
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" class="form-textarea" placeholder="How can I help you?" required></textarea>
         </div>
-        <button type="submit" class="btn-submit">
+        <button type="submit" class="btn-submit" id="submit-btn">
           Send Message
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
@@ -135,19 +134,21 @@
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
-      <div class="footer-logo">&lt;<span>DM</span> /&gt;</div>
-      <p class="footer-text">© 2026 Dipayan Mahato. Built with <i class="fas fa-heart" style="color:#c45a6b;"></i> and Python.</p>
-      <a href="#hero" class="footer-back-to-top">
-        Back to top
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
-      </a>
+      <div class="footer-container">
+        <div class="footer-logo">&lt;<span>DM</span> /&gt;</div>
+        <p class="footer-text">© 2026 Dipayan Mahato. All rights reserved.</p>
+        <a href="#hero" class="footer-back-to-top">
+          Back to top 
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+        </a>
+      </div>
     </footer>
-  </div>
 
-  <!-- Alert popup -->
-  <div class="form-alert" id="form-alert">
-    <span class="form-alert-icon">✓</span>
-    <span id="form-alert-message">Message sent!</span>
+    <!-- Alert Popup -->
+    <div class="form-alert" id="form-alert">
+      <span class="form-alert-icon">✓</span>
+      <span id="form-alert-message">Message sent successfully!</span>
+    </div>
   </div>
 
   <!-- JavaScript -->
