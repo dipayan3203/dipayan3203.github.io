@@ -2,646 +2,532 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Dipayan Mahato | Python Developer & Applied AI Engineer</title>
 
     <meta name="description"
-        content="Portfolio of Dipayan Mahato, Python Developer & Applied AI Engineer specializing in FastAPI, AI, Automation, Backend Development and Payment Systems." />
+        content="Portfolio of Dipayan Mahato, Python Developer & Applied AI Engineer specializing in Backend Development, FastAPI, AI Agents, LangChain, Automation and Cloud Applications.">
 
     <meta name="keywords"
-        content="Dipayan Mahato, Python Developer, FastAPI, AI Engineer, LangChain, Backend Developer, Portfolio, PostgreSQL, Docker" />
+        content="Dipayan Mahato, Python Developer, FastAPI, AI Engineer, Backend Developer, LangChain, Portfolio">
 
-    <meta name="author" content="Dipayan Mahato" />
+    <meta name="author" content="Dipayan Mahato">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Dipayan Mahato | Portfolio">
+    <meta property="og:title"
+        content="Dipayan Mahato | Python Developer">
+
     <meta property="og:description"
-        content="Python Developer & Applied AI Engineer building scalable backend systems and AI-powered applications.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/images/preview.png">
+        content="Python Developer & Applied AI Engineer">
 
-    <!-- Favicon -->
-    <link rel="icon" href="assets/favicon/favicon.ico">
+    <meta property="og:type"
+        content="website">
+
+    <meta property="og:image"
+        content="assets/images/preview.png">
+
+    <link rel="icon"
+        href="favicon.ico">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- AOS -->
     <link rel="stylesheet"
-        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Official Devicons -->
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <link rel="stylesheet"
+        href="css/style.css">
 
 </head>
 
 <body>
 
-<div class="loader" id="loader">
-    <span class="loader-ring"></span>
-</div>
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
 
-<div id="progressBar"></div>
+    <div id="progressBar"></div>
 
-<div class="cursor-glow"></div>
+    <header class="header">
 
-<header>
+        <div class="container nav">
 
-<nav class="navbar">
+            <a href="#home" class="logo">
 
-<div class="container">
+                Dipayan<span>.</span>
 
-<a href="#" class="logo">
+            </a>
 
-<span class="logo-primary">Dipayan</span>
+            <ul class="nav-links">
 
-<span class="logo-secondary">.</span>
+                <li><a href="#home">Home</a></li>
 
-</a>
+                <li><a href="#about">About</a></li>
 
-<ul class="nav-links">
+                <li><a href="#tech">Tech Stack</a></li>
 
-<li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
 
-<li><a href="#stack">Stack</a></li>
+                <li><a href="#projects">Projects</a></li>
 
-<li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
 
-<li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
 
-<li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
 
-<li><a href="#contact">Contact</a></li>
+            </ul>
 
-</ul>
+            <button class="menu-btn">
 
-<div class="nav-social">
+                <i class="fas fa-bars"></i>
 
-<a href="https://github.com/dipayan3203" target="_blank">
+            </button>
 
-<i class="fab fa-github"></i>
+        </div>
 
-</a>
+    </header>
 
-<a href="#" target="_blank">
+    <!-- ========================= -->
 
-<i class="fab fa-linkedin"></i>
+    <!-- HERO -->
 
-</a>
+    <!-- ========================= -->
 
-<button id="theme-toggle">
+    <section id="home"
+        class="hero">
 
-<i class="fas fa-moon"></i>
+        <div class="container hero-grid">
 
-</button>
+            <div class="hero-content">
 
-</div>
+                <span class="hero-tag">
 
-<div class="menu-btn">
+                    PYTHON • FASTAPI • AI
 
-<i class="fas fa-bars"></i>
+                </span>
 
-</div>
+                <h1>
 
-</div>
+                    Hi,
+                    I'm
+                    <span>Dipayan Mahato</span>
 
-</nav>
+                </h1>
 
-</header>
+                <h2>
 
-<main>
+                    Python Developer &
+                    Applied AI Engineer
 
-<section id="hero">
+                </h2>
 
-<div id="particles-js"></div>
+                <p>
 
-<div class="container hero-grid">
+                    I design and build scalable backend systems,
+                    AI-powered applications,
+                    automation workflows,
+                    REST APIs,
+                    and intelligent software using Python,
+                    FastAPI,
+                    LangChain,
+                    PostgreSQL,
+                    Docker,
+                    and modern cloud technologies.
 
-<div class="hero-content" data-aos="fade-right">
+                </p>
 
-<span class="hero-tag">
+                <div class="hero-buttons">
 
-Python Developer • Applied AI Engineer
+                    <a href="#projects"
+                        class="btn btn-primary">
 
-</span>
+                        View Projects
 
-<h1>
+                    </a>
 
-Hi, I'm
+                    <a href="#contact"
+                        class="btn btn-outline">
 
-<span>Dipayan Mahato</span>
+                        Contact Me
 
-</h1>
+                    </a>
 
-<h2>
+                </div>
 
-Building Scalable Backend Systems,
+                <div class="hero-social">
 
-AI Applications,
+                    <a href="mailto:dipayanmahato9733@gmail.com"
+                        title="Email">
 
-Automation,
+                        <i class="fas fa-envelope"></i>
 
-and Payment Infrastructure.
+                    </a>
 
-</h2>
+                    <a href="https://github.com/dipayan3203"
+                        target="_blank">
 
-<p>
+                        <i class="fab fa-github"></i>
 
-I build production-ready backend applications using Python, FastAPI,
-PostgreSQL, Docker, AI frameworks, and cloud technologies.
-My focus is creating scalable APIs, intelligent automation,
-LLM-powered systems, and modern payment platforms.
+                    </a>
 
-</p>
+                    <a href="https://www.linkedin.com/in/dipayan-mahato-5a1551262/"
+                        target="_blank">
 
-<div class="hero-buttons">
+                        <i class="fab fa-linkedin"></i>
 
-<a href="#projects" class="btn primary">
+                    </a>
 
-View Projects
+                </div>
 
-</a>
+            </div>
 
-<a href="#contact" class="btn secondary">
-
-Contact Me
-
-</a>
-
-<a href="assets/resume.pdf"
-
-download
-
-class="btn outline">
-
-Download Resume
-
-</a>
-
-</div>
-
-<div class="hero-social">
-
-<a href="https://github.com/dipayan3203" target="_blank">
-
-<i class="fab fa-github"></i>
-
-</a>
-
-<a href="#" target="_blank">
-
-<i class="fab fa-linkedin"></i>
-
-</a>
-
-<a href="mailto:your@email.com">
-
-<i class="fas fa-envelope"></i>
-
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-console"
-
-data-aos="fade-left">
-
-<div class="window-controls">
-
-<span></span>
-
-<span></span>
-
-<span></span>
-
-</div>
-
-<div class="console-header">
-
-backend.py
-
-</div>
+            <div class="hero-console">
 
 <pre><code>
-
 from fastapi import FastAPI
-
-from langgraph.graph import StateGraph
-
-from app.services.payment import create_payment
+from langchain.agents import AgentExecutor
 
 app = FastAPI()
 
-graph = StateGraph()
-
-@app.post("/payments")
-
-async def payment():
-
-    result = await create_payment()
+@app.get("/")
+def portfolio():
 
     return {
 
-        "status":"success",
+        "developer":"Dipayan Mahato",
 
-        "engine":"Swift Pay",
+        "role":"Applied AI Engineer",
 
-        "backend":"FastAPI"
+        "status":"Building AI Solutions"
 
     }
-
 </code></pre>
 
-<div class="floating-chip chip1">
+                <div class="stack-icons">
 
-Python
+                    <span>
 
-</div>
+                        <i class="devicon-python-plain colored"></i>
 
-<div class="floating-chip chip2">
+                        Python
 
-FastAPI
-
-</div>
-
-<div class="floating-chip chip3">
-
-Docker
-
-</div>
-
-<div class="floating-chip chip4">
-
-PostgreSQL
-
-</div>
-
-<div class="floating-chip chip5">
-
-LangChain
-
-</div>
-
-<div class="floating-chip chip6">
-
-AWS
-
-</div>
-
-<div class="floating-chip chip7">
-
-Redis
-
-</div>
-
-</div>
-
-</div>
-
-</section><!-- ========================================= -->
-<!-- ABOUT -->
-<!-- ========================================= -->
-
-<section id="about">
-
-    <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-            <span>ABOUT ME</span>
-            <h2>Backend Engineer Building Intelligent Systems</h2>
-        </div>
-
-        <div class="about-grid">
-
-            <div class="about-text" data-aos="fade-right">
-
-                <p>
-                    I'm <strong>Dipayan Mahato</strong>, a Python Developer and
-                    Applied AI Engineer passionate about building scalable
-                    backend architectures, intelligent automation workflows,
-                    REST APIs, and AI-powered applications.
-                </p>
-
-                <p>
-                    My primary stack includes Python, FastAPI, PostgreSQL,
-                    Docker, LangChain, LangGraph, and cloud technologies.
-                    I enjoy solving real-world engineering problems through
-                    clean architecture and production-ready software.
-                </p>
-
-                <p>
-                    Recently I've been focusing on backend infrastructure,
-                    payment systems, Retrieval-Augmented Generation (RAG),
-                    LLM applications, workflow automation, and developer tools.
-                </p>
-
-                <div class="about-highlights">
-
-                    <div class="highlight-card">
-                        <h3>2+</h3>
-                        <span>Years Experience</span>
-                    </div>
-
-                    <div class="highlight-card">
-                        <h3>20+</h3>
-                        <span>Projects Built</span>
-                    </div>
-
-                    <div class="highlight-card">
-                        <h3>AI</h3>
-                        <span>Automation Focus</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="about-skills" data-aos="fade-left">
-
-                <div class="skill-box">
-                    <i class="fa-solid fa-server"></i>
-                    <h4>Backend Development</h4>
-                    <p>FastAPI, Flask, Django, REST APIs</p>
-                </div>
-
-                <div class="skill-box">
-                    <i class="fa-solid fa-robot"></i>
-                    <h4>Applied AI</h4>
-                    <p>LangChain, LangGraph, Gemini, OpenAI</p>
-                </div>
-
-                <div class="skill-box">
-                    <i class="fa-solid fa-database"></i>
-                    <h4>Database Design</h4>
-                    <p>PostgreSQL, MySQL, Redis, SQLAlchemy</p>
-                </div>
-
-                <div class="skill-box">
-                    <i class="fa-solid fa-cloud"></i>
-                    <h4>Deployment</h4>
-                    <p>Docker, AWS, GitHub Actions</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- TECH STACK -->
-<!-- ========================================= -->
-
-<section id="stack">
-
-    <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-
-            <span>TECH STACK</span>
-
-            <h2>Technologies I Use</h2>
-
-        </div>
-
-        <div class="stack-grid">
-
-            <!-- Backend -->
-
-            <div class="stack-card" data-aos="zoom-in">
-
-                <h3>Backend</h3>
-
-                <div class="stack-tags">
-
-                    <span>Python</span>
-                    <span>FastAPI</span>
-                    <span>Flask</span>
-                    <span>Django</span>
-                    <span>REST APIs</span>
-                    <span>SQLAlchemy</span>
-                    <span>Pydantic</span>
-
-                </div>
-
-            </div>
-
-            <!-- AI -->
-
-            <div class="stack-card" data-aos="zoom-in">
-
-                <h3>Artificial Intelligence</h3>
-
-                <div class="stack-tags">
-
-                    <span>LangChain</span>
-                    <span>LangGraph</span>
-                    <span>OpenAI</span>
-                    <span>Gemini</span>
-                    <span>RAG</span>
-                    <span>Prompt Engineering</span>
-                    <span>Embeddings</span>
-
-                </div>
-
-            </div>
-
-            <!-- Database -->
-
-            <div class="stack-card" data-aos="zoom-in">
-
-                <h3>Database</h3>
-
-                <div class="stack-tags">
-
-                    <span>PostgreSQL</span>
-                    <span>MySQL</span>
-                    <span>Redis</span>
-                    <span>MongoDB</span>
-                    <span>Alembic</span>
-
-                </div>
-
-            </div>
-
-            <!-- Cloud -->
-
-            <div class="stack-card" data-aos="zoom-in">
-
-                <h3>Cloud & DevOps</h3>
-
-                <div class="stack-tags">
-
-                    <span>Docker</span>
-                    <span>AWS</span>
-                    <span>Git</span>
-                    <span>GitHub</span>
-                    <span>GitHub Actions</span>
-                    <span>Linux</span>
-
-                </div>
-
-            </div>
-
-            <!-- Frontend -->
-
-            <div class="stack-card" data-aos="zoom-in">
-
-                <h3>Frontend</h3>
-
-                <div class="stack-tags">
-
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>React</span>
-
-                </div>
-
-            </div>
-
-            <!-- Currently Learning -->
-
-            <div class="stack-card featured" data-aos="zoom-in">
-
-                <h3>Currently Building</h3>
-
-                <div class="stack-tags">
-
-                    <span>Swift Pay</span>
-                    <span>Payment Gateway</span>
-                    <span>Microservices</span>
-                    <span>AI Agents</span>
-                    <span>Workflow Automation</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ========================================= -->
-<!-- EXPERIENCE -->
-<!-- ========================================= -->
-
-<section id="experience">
-
-    <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-            <span>EXPERIENCE</span>
-            <h2>Professional Journey</h2>
-        </div>
-
-        <div class="timeline">
-
-            <!-- Accepto -->
-
-            <div class="timeline-item" data-aos="fade-right">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-
-                    <span class="timeline-date">
-                        May 2025 – Present
                     </span>
+
+                    <span>
+
+                        <i class="devicon-fastapi-plain colored"></i>
+
+                        FastAPI
+
+                    </span>
+
+                    <span>
+
+                        <i class="devicon-docker-plain colored"></i>
+
+                        Docker
+
+                    </span>
+
+                    <span>
+
+                        <i class="devicon-postgresql-plain colored"></i>
+
+                        PostgreSQL
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ================================= -->
+    <!-- ABOUT -->
+    <!-- ================================= -->
+
+    <section id="about" class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>About Me</span>
+
+                <h2>Building Intelligent Software That Solves Real Problems</h2>
+
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-content">
+
+                    <p>
+
+                        I'm <strong>Dipayan Mahato</strong>, a Python Developer &
+                        Applied AI Engineer passionate about building scalable
+                        backend applications, AI-powered products, and workflow
+                        automation.
+
+                    </p>
+
+                    <p>
+
+                        My expertise includes REST API development, FastAPI,
+                        LangChain, PostgreSQL, Docker, AI Agents,
+                        Retrieval-Augmented Generation (RAG),
+                        cloud deployment, and software architecture.
+
+                    </p>
+
+                    <p>
+
+                        I enjoy transforming ideas into production-ready
+                        applications that are clean, secure, and scalable.
+
+                    </p>
+
+                    <div class="about-buttons">
+
+                        <a href="#projects" class="btn btn-primary">
+
+                            View Projects
+
+                        </a>
+
+                        <a href="#contact" class="btn btn-outline">
+
+                            Let's Connect
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="about-cards">
+
+                    <div class="stat-card">
+
+                        <h3>2+</h3>
+
+                        <span>Years Experience</span>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h3>20+</h3>
+
+                        <span>Projects Built</span>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h3>15+</h3>
+
+                        <span>Technologies</span>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h3>AI</h3>
+
+                        <span>Backend Specialist</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- TECH STACK -->
+    <!-- ================================= -->
+
+    <section id="tech" class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Tech Stack</span>
+
+                <h2>Technologies I Work With</h2>
+
+            </div>
+
+            <div class="tech-grid">
+
+                <div class="tech-card">
+                    <i class="devicon-python-plain colored"></i>
+                    <span>Python</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-fastapi-plain colored"></i>
+                    <span>FastAPI</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-django-plain colored"></i>
+                    <span>Django</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-flask-original"></i>
+                    <span>Flask</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-javascript-plain colored"></i>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-typescript-plain colored"></i>
+                    <span>TypeScript</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-react-original colored"></i>
+                    <span>React</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-html5-plain colored"></i>
+                    <span>HTML5</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-css3-plain colored"></i>
+                    <span>CSS3</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-tailwindcss-original colored"></i>
+                    <span>Tailwind CSS</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-postgresql-plain colored"></i>
+                    <span>PostgreSQL</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-mongodb-plain colored"></i>
+                    <span>MongoDB</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-redis-plain colored"></i>
+                    <span>Redis</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-docker-plain colored"></i>
+                    <span>Docker</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-amazonwebservices-original colored"></i>
+                    <span>AWS</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-git-plain colored"></i>
+                    <span>Git</span>
+                </div>
+
+                <div class="tech-card">
+                    <i class="devicon-github-original"></i>
+                    <span>GitHub</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- EXPERIENCE -->
+    <!-- ================================= -->
+
+    <section id="experience" class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Experience</span>
+
+                <h2>Professional Journey</h2>
+
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
 
                     <h3>Python Developer</h3>
 
                     <h4>Accepto Technologies</h4>
 
+                    <span>May 2025 – Present</span>
+
                     <p>
 
-                        Building production-ready backend systems,
-                        AI-powered automation,
-                        REST APIs,
-                        FastAPI services,
-                        PostgreSQL databases,
-                        authentication systems,
-                        workflow automation
-                        and scalable backend architectures.
+                        Building backend APIs, automation systems,
+                        AI-powered applications, workflow automation,
+                        and scalable Python services.
 
                     </p>
 
-                    <ul>
-
-                        <li>FastAPI Backend Development</li>
-
-                        <li>REST API Design</li>
-
-                        <li>AI Integrations</li>
-
-                        <li>Automation Workflows</li>
-
-                        <li>Database Design</li>
-
-                        <li>JWT Authentication</li>
-
-                    </ul>
-
                 </div>
 
-            </div>
-
-            <!-- Overseas -->
-
-            <div class="timeline-item" data-aos="fade-left">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-
-                    <span class="timeline-date">
-                        Jun 2024 – Mar 2025
-                    </span>
+                <div class="timeline-item">
 
                     <h3>Field Engineer</h3>
 
                     <h4>Overseas Engineering Pvt. Ltd.</h4>
 
+                    <span>Jun 2024 – Mar 2025</span>
+
                     <p>
 
-                        Worked on industrial engineering,
-                        project execution,
-                        technical documentation,
-                        field operations,
-                        quality assurance
-                        and client coordination.
+                        Managed engineering projects,
+                        technical operations,
+                        documentation,
+                        and client support.
 
                     </p>
-
-                    <ul>
-
-                        <li>Technical Operations</li>
-
-                        <li>Engineering Documentation</li>
-
-                        <li>Quality Assurance</li>
-
-                        <li>Industrial Projects</li>
-
-                    </ul>
 
                 </div>
 
@@ -649,521 +535,277 @@ Redis
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- ================================= -->
+    <!-- PROJECTS -->
+    <!-- ================================= -->
 
-<!-- ========================================= -->
-<!-- PROJECTS -->
-<!-- ========================================= -->
+    <section id="projects" class="section">
 
-<section id="projects">
+        <div class="container">
 
-<div class="container">
+            <div class="section-heading">
 
-<div class="section-title" data-aos="fade-up">
+                <span>Projects</span>
 
-<span>PROJECTS</span>
-
-<h2>Featured Work</h2>
-
-<p>
-
-Recent backend, AI and automation projects.
-
-</p>
-
-</div>
-
-<div class="projects-grid">
-
-<!-- Swift Pay -->
-
-<div class="project-card featured"
-
-data-aos="zoom-in">
-
-<div class="project-top">
-
-<span class="status active">
-
-ACTIVE
-
-</span>
-
-</div>
-
-<h3>
-
-Swift Pay
-
-</h3>
-
-<p>
-
-Modern payment gateway platform inspired by
-enterprise payment providers.
-
-Designed using FastAPI,
-PostgreSQL,
-Alembic,
-JWT,
-Docker,
-merchant onboarding,
-payment APIs
-and scalable backend architecture.
-
-</p>
-
-<div class="project-stack">
-
-<span>FastAPI</span>
-
-<span>PostgreSQL</span>
-
-<span>Docker</span>
-
-<span>JWT</span>
-
-<span>Alembic</span>
-
-<span>Python</span>
-
-</div>
-
-<div class="project-links">
-
-<a
-href="https://github.com/dipayan3203/Swift-Pay"
-target="_blank">
-
-GitHub
-
-</a>
-
-<a href="#">
-
-Documentation
-
-</a>
-
-</div>
-
-</div>
-
-<!-- Image Analyzer -->
-
-<div class="project-card"
-
-data-aos="zoom-in"
-
-data-aos-delay="100">
-
-<div class="project-top">
-
-<span class="status">
-
-AI
-
-</span>
-
-</div>
-
-<h3>
-
-Image Analyzer
-
-</h3>
-
-<p>
-
-AI-powered image analysis application
-using Gemini,
-FastAPI
-and modern REST APIs.
-
-Supports intelligent image understanding,
-descriptions
-and metadata generation.
-
-</p>
-
-<div class="project-stack">
-
-<span>Gemini</span>
-
-<span>FastAPI</span>
-
-<span>Python</span>
-
-<span>REST API</span>
-
-</div>
-
-<div class="project-links">
-
-<a
-href="https://github.com/dipayan3203/Image-Analyzer"
-target="_blank">
-
-GitHub
-
-</a>
-
-<a href="#">
-
-Live Demo
-
-</a>
-
-</div>
-
-</div>
-
-<!-- Trackify -->
-
-<div class="project-card"
-
-data-aos="zoom-in"
-
-data-aos-delay="200">
-
-<div class="project-top">
-
-<span class="status">
-
-Backend
-
-</span>
-
-</div>
-
-<h3>
-
-Trackify
-
-</h3>
-
-<p>
-
-Backend application featuring
-authentication,
-database integration,
-deployment workflow,
-API development
-and modern backend architecture.
-
-</p>
-
-<div class="project-stack">
-
-<span>Python</span>
-
-<span>PostgreSQL</span>
-
-<span>Authentication</span>
-
-<span>API</span>
-
-</div>
-
-<div class="project-links">
-
-<a
-href="https://github.com/dipayan3203/trackify"
-target="_blank">
-
-GitHub
-
-</a>
-
-<a href="#">
-
-Live Demo
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Dynamic GitHub Projects -->
-
-<div class="github-section"
-
-data-aos="fade-up">
-
-<h3>
-
-Latest GitHub Repositories
-
-</h3>
-
-<p>
-
-Automatically loaded using the GitHub API.
-
-</p>
-
-<div id="github-projects">
-
-<div class="loading">
-
-Loading repositories...
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-<!-- ========================================= -->
-<!-- EDUCATION -->
-<!-- ========================================= -->
-
-<section id="education">
-
-    <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-
-            <span>EDUCATION</span>
-
-            <h2>Education & Certifications</h2>
-
-        </div>
-
-        <div class="education-grid">
-
-            <div class="education-card" data-aos="fade-right">
-
-                <i class="fas fa-graduation-cap"></i>
-
-                <h3>Bachelor of Technology</h3>
-
-                <h4>National Institute of Technology (NIT) Durgapur</h4>
-
-                <p>
-                    Engineering graduate with a strong foundation in software
-                    development, problem solving, algorithms, databases,
-                    backend engineering and applied artificial intelligence.
-                </p>
+                <h2>Latest GitHub Repositories</h2>
 
             </div>
 
-            <div class="education-card" data-aos="fade-left">
+            <div id="github-projects" class="project-grid">
 
-                <i class="fas fa-award"></i>
-
-                <h3>Professional Focus</h3>
-
-                <ul>
-
-                    <li>Python Development</li>
-                    <li>FastAPI</li>
-                    <li>Artificial Intelligence</li>
-                    <li>Backend Engineering</li>
-                    <li>REST APIs</li>
-                    <li>PostgreSQL</li>
-                    <li>Docker</li>
-                    <li>Cloud Deployment</li>
-
-                </ul>
+                <!-- github.js loads latest 3 repositories -->
 
             </div>
 
         </div>
 
-    </div>
+    </section>
+        <!-- ================================= -->
+    <!-- EDUCATION -->
+    <!-- ================================= -->
 
-</section>
+    <section id="education" class="section">
 
-<!-- ========================================= -->
-<!-- CONTACT -->
-<!-- ========================================= -->
+        <div class="container">
 
-<section id="contact">
+            <div class="section-heading">
 
-    <div class="container">
+                <span>Education</span>
 
-        <div class="section-title" data-aos="fade-up">
+                <h2>Academic Background</h2>
 
-            <span>CONTACT</span>
+            </div>
 
-            <h2>Let's Build Something Great</h2>
+            <div class="education-card">
 
-        </div>
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
 
-        <div class="contact-grid">
+                <div class="education-content">
 
-            <div class="contact-info" data-aos="fade-right">
+                    <h3>Bachelor of Technology (B.Tech)</h3>
 
-                <h3>Get In Touch</h3>
+                    <h4>National Institute of Technology (NIT) Durgapur</h4>
 
-                <p>
+                    <p>
+                        Strong foundation in engineering, programming,
+                        algorithms, software development,
+                        and analytical problem solving.
+                    </p>
 
-                    I'm always interested in discussing backend engineering,
-                    AI systems, automation, or exciting software projects.
+                </div>
 
-                </p>
-<div class="contact-item">
-    <div class="contact-icon">
-        <i class="fas fa-envelope"></i>
-    </div>
-
-    <a href="mailto:dipayanmahato9733@gmail.com">
-        dipayanmahato9733@gmail.com
-    </a>
-</div>
-
-<div class="contact-item">
-    <div class="contact-icon">
-        <i class="fab fa-github"></i>
-    </div>
-
-    <a href="https://github.com/dipayan3203"
-       target="_blank"
-       rel="noopener noreferrer">
-        github.com/dipayan3203
-    </a>
-</div>
-
-<div class="contact-item">
-    <div class="contact-icon">
-        <i class="fab fa-linkedin"></i>
-    </div>
-
-    <a href="https://www.linkedin.com/in/dipayan-mahato-5a1551262/"
-       target="_blank"
-       rel="noopener noreferrer">
-        linkedin.com/in/dipayan-mahato-5a1551262
-    </a>
-</div>
-
-            <!-- Replace YOUR_FORM_ID with your Formspree ID -->
-            <form class="contact-form"
-                  action="https://formspree.io/f/mbdeparb"
-                  method="POST"
-                  data-aos="fade-left">
-
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    required>
-
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    required>
-
-                <textarea
-                    name="message"
-                    rows="7"
-                    placeholder="Write your message..."
-                    required></textarea>
-
-                <button
-                    type="submit"
-                    class="btn primary">
-
-                    Send Message
-
-                </button>
-
-            </form>
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- ================================= -->
+    <!-- CERTIFICATIONS -->
+    <!-- ================================= -->
 
-<!-- ========================================= -->
-<!-- FOOTER -->
-<!-- ========================================= -->
+    <section id="certifications" class="section">
 
-<footer>
+        <div class="container">
 
-    <div class="container">
+            <div class="section-heading">
 
-        <div class="footer-content">
+                <span>Certifications</span>
 
-            <h3>Dipayan Mahato</h3>
+                <h2>Professional Certifications</h2>
+
+            </div>
+
+            <div class="cert-grid">
+
+                <div class="cert-card">
+
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+
+                    <h3>Mastercard Cybersecurity Job Simulation</h3>
+
+                    <p>Forage × Mastercard</p>
+
+                    <a
+                        href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_43M4hTekSb9rtPaPs_1766506197983_completion_certificate.pdf"
+                        target="_blank"
+                        class="btn btn-small">
+
+                        View Certificate
+
+                    </a>
+
+                </div>
+
+                <div class="cert-card">
+
+                    <div class="cert-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+
+                    <h3>Kaggle Python</h3>
+
+                    <p>Kaggle</p>
+
+                    <a
+                        href="https://www.kaggle.com/certification/badges/dipayanmahato/105"
+                        target="_blank"
+                        class="btn btn-small">
+
+                        View Badge
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- CONTACT -->
+    <!-- ================================= -->
+
+    <section id="contact" class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Contact</span>
+
+                <h2>Let's Build Something Together</h2>
+
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-info">
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+
+                        <a href="mailto:dipayanmahato9733@gmail.com">
+
+                            dipayanmahato9733@gmail.com
+
+                        </a>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+
+                        <a
+                            href="https://github.com/dipayan3203"
+                            target="_blank">
+
+                            GitHub · dipayan3203
+
+                        </a>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+
+                        <a
+                            href="https://www.linkedin.com/in/dipayan-mahato-5a1551262/"
+                            target="_blank">
+
+                            LinkedIn · Dipayan Mahato
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <form class="contact-form"
+                    action="https://formspree.io/f/YOUR_FORM_ID"
+                    method="POST">
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        required>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address"
+                        required>
+
+                    <textarea
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message..."
+                        required></textarea>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- FOOTER -->
+    <!-- ================================= -->
+
+    <footer class="footer">
+
+        <div class="container">
 
             <p>
 
-                Python Developer • Applied AI Engineer
-
-            </p>
-
-            <div class="footer-social">
-
-                <a href="https://github.com/dipayan3203"
-                   target="_blank">
-
-                    <i class="fab fa-github"></i>
-
-                </a>
-                <a href="https://www.linkedin.com/in/dipayan-mahato-5a1551262/"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="LinkedIn">
-
-    <i class="fab fa-linkedin"></i>
-</a>
-
-            
-
-                </a>
-
-                <a href="mailto:dipayanmahato9733@gmail.com?subject=Portfolio%20Inquiry"
-   aria-label="Email">
-
-    <i class="fas fa-envelope"></i>
-                </a>
-
-            </div>
-
-            <p class="copyright">
-
                 © 2026 Dipayan Mahato.
-                Built with HTML, CSS & JavaScript.
+                Built with ❤️ using HTML, CSS & JavaScript.
 
             </p>
 
         </div>
 
-    </div>
+    </footer>
 
-</footer>
+    <!-- Particles -->
 
-<button id="scrollTop">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
-    <i class="fas fa-arrow-up"></i>
+    <!-- Scripts -->
 
-</button>
+    <script src="js/particles.js"></script>
 
-<!-- Scripts -->
+    <script src="js/github.js"></script>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script src="js/particles.js"></script>
-<script src="js/github.js"></script>
-<script src="js/app.js"></script>
-
-</main>
+    <script src="js/app.js"></script>
 
 </body>
 
