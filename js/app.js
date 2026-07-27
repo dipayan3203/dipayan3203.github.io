@@ -1,36 +1,24 @@
-/* =====================================================
-   PORTFOLIO APP
-===================================================== */
+/* ==========================================================
+   Dipayan Mahato Portfolio
+   Main JavaScript
+========================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
     initLoader();
-
-    initNavbar();
-
-    initMobileMenu();
-
+    initProgressBar();
     initSmoothScroll();
-
-    initScrollProgress();
-
-    initScrollTop();
-
-    initRevealAnimations();
-
-    initTyping();
-
-    initThemeToggle();
-
-    initAOS();
-
-    loadGithubProjects();
+    initNavbar();
+    initRevealAnimation();
+    initTypingEffect();
+    initCounters();
+    initContactForm();
 
 });
 
-/* =====================================================
-   LOADER
-===================================================== */
+/* ==========================================================
+   Loader
+========================================================== */
 
 function initLoader() {
 
@@ -40,125 +28,118 @@ function initLoader() {
 
     window.addEventListener("load", () => {
 
-        loader.classList.add("hide");
-
         setTimeout(() => {
 
-            loader.remove();
+            loader.classList.add("hide");
 
-        }, 700);
+        }, 500);
 
     });
 
 }
 
-/* =====================================================
-   STICKY NAVBAR
-===================================================== */
+/* ==========================================================
+   Scroll Progress Bar
+========================================================== */
 
-function initNavbar() {
+function initProgressBar() {
 
-    const navbar = document.querySelector(".navbar");
+    const progress = document.getElementById("progressBar");
 
-    if (!navbar) return;
+    if (!progress) return;
 
     window.addEventListener("scroll", () => {
 
-        if (window.scrollY > 60) {
+        const scrollTop =
+            document.documentElement.scrollTop;
 
-            navbar.classList.add("sticky");
+        const height =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+
+        const width = (scrollTop / height) * 100;
+
+        progress.style.width = width + "%";
+
+    });
+
+}
+
+/* ==========================================================
+   Sticky Navbar
+========================================================== */
+
+function initNavbar() {
+
+    const header = document.querySelector(".header");
+
+    if (!header) return;
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 40) {
+
+            header.classList.add("sticky");
 
         } else {
 
-            navbar.classList.remove("sticky");
+            header.classList.remove("sticky");
 
         }
 
-        highlightActiveSection();
-
     });
 
 }
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
-
-function initMobileMenu() {
-
-    const menuBtn = document.querySelector(".menu-btn");
-
-    const nav = document.querySelector(".nav-links");
-
-    if (!menuBtn || !nav) return;
-
-    menuBtn.addEventListener("click", () => {
-
-        nav.classList.toggle("active");
-
-        menuBtn.classList.toggle("active");
-
-    });
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            nav.classList.remove("active");
-
-            menuBtn.classList.remove("active");
-
-        });
-
-    });
-
-}
-
-/* =====================================================
-   SMOOTH SCROLL
-===================================================== */
+/* ==========================================================
+   Smooth Scroll
+========================================================== */
 
 function initSmoothScroll() {
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]')
+        .forEach(anchor => {
 
-        anchor.addEventListener("click", e => {
+            anchor.addEventListener("click", function (e) {
 
-            e.preventDefault();
+                e.preventDefault();
 
-            const target = document.querySelector(anchor.getAttribute("href"));
+                const target = document.querySelector(
+                    this.getAttribute("href")
+                );
 
-            if (!target) return;
+                if (!target) return;
 
-            window.scrollTo({
+                target.scrollIntoView({
 
-                top: target.offsetTop - 70,
+                    behavior: "smooth",
+                    block: "start"
 
-                behavior: "smooth"
+                });
 
             });
 
         });
 
-    });
-
 }
 
-/* =====================================================
-   ACTIVE NAVIGATION
-===================================================== */
+/* ==========================================================
+   Active Navigation
+========================================================== */
 
-function highlightActiveSection() {
+window.addEventListener("scroll", () => {
 
-    const sections = document.querySelectorAll("section[id]");
+    const sections =
+        document.querySelectorAll("section");
 
-    const links = document.querySelectorAll(".nav-links a");
+    const links =
+        document.querySelectorAll(".nav-links a");
 
     let current = "";
 
     sections.forEach(section => {
 
-        const top = section.offsetTop - 150;
+        const top = section.offsetTop - 120;
 
         if (window.scrollY >= top) {
 
@@ -172,7 +153,9 @@ function highlightActiveSection() {
 
         link.classList.remove("active");
 
-        if (link.getAttribute("href") === "#" + current) {
+        if (
+            link.getAttribute("href") === "#" + current
+        ) {
 
             link.classList.add("active");
 
@@ -180,138 +163,101 @@ function highlightActiveSection() {
 
     });
 
-}
+});
+/* ==========================================================
+   Reveal on Scroll
+========================================================== */
 
-/* =====================================================
-   SCROLL PROGRESS BAR
-===================================================== */
+function initRevealAnimation() {
 
-function initScrollProgress() {
+    const elements = document.querySelectorAll(
 
-    const progress = document.getElementById("progressBar");
+        ".section, .project-card, .tech-card, .timeline-item, .education-card, .cert-card, .stat-card"
 
-    if (!progress) return;
+    );
 
-    window.addEventListener("scroll", () => {
+    if (!elements.length) return;
 
-        const height =
+    const observer = new IntersectionObserver(
 
-            document.documentElement.scrollHeight -
+        (entries) => {
 
-            document.documentElement.clientHeight;
+            entries.forEach(entry => {
 
-        const value =
+                if (entry.isIntersecting) {
 
-            (window.scrollY / height) * 100;
+                    entry.target.classList.add("show");
 
-        progress.style.width = value + "%";
+                    observer.unobserve(entry.target);
 
-    });
+                }
 
-}
+            });
 
-/* =====================================================
-   SCROLL TO TOP
-===================================================== */
+        },
 
-function initScrollTop() {
+        {
 
-    const button = document.getElementById("scrollTop");
-
-    if (!button) return;
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 500) {
-
-            button.classList.add("show");
-
-        } else {
-
-            button.classList.remove("show");
+            threshold: 0.15
 
         }
 
-    });
-
-    button.addEventListener("click", () => {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-
-        });
-
-    });
-} // <-- ADD THIS LINE
-  /* =====================================================
-   REVEAL ANIMATIONS
-===================================================== */
-
-function initRevealAnimations() {
-
-    const elements = document.querySelectorAll(
-        ".reveal, .fade-left, .fade-right, .fade-down, .zoom-in"
     );
 
-    const observer = new IntersectionObserver((entries) => {
+    elements.forEach(element => {
 
-        entries.forEach(entry => {
+        element.classList.add("hidden");
 
-            if (entry.isIntersecting) {
+        observer.observe(element);
 
-                entry.target.classList.add("active");
-
-            }
-
-        });
-
-    },
-                                                                                
-      { threshold: 0.15
     });
-
-    elements.forEach(el => observer.observe(el));
 
 }
 
-/* =====================================================
-   TYPING EFFECT
-===================================================== */
+/* ==========================================================
+   Typing Effect
+========================================================== */
 
-function initTyping() {
+function initTypingEffect() {
 
-    const element = document.querySelector(".typing");
+    const target = document.getElementById("typing");
 
-    if (!element) return;
+    if (!target) return;
 
     const words = [
+
         "Python Developer",
+
         "Applied AI Engineer",
-        "FastAPI Backend Developer",
-        "LLM & RAG Engineer",
-        "Automation Developer"
+
+        "FastAPI Developer",
+
+        "LLM Engineer",
+
+        "Automation Specialist"
+
     ];
 
     let wordIndex = 0;
+
     let charIndex = 0;
+
     let deleting = false;
 
     function type() {
 
-        const current = words[wordIndex];
+        const currentWord = words[wordIndex];
 
         if (!deleting) {
 
-            element.textContent = current.substring(0, charIndex++);
+            target.textContent =
+                currentWord.substring(0, charIndex++);
 
-            if (charIndex > current.length) {
+            if (charIndex > currentWord.length) {
 
                 deleting = true;
 
-                setTimeout(type, 1400);
+                setTimeout(type, 1200);
 
                 return;
 
@@ -319,19 +265,22 @@ function initTyping() {
 
         } else {
 
-            element.textContent = current.substring(0, charIndex--);
+            target.textContent =
+                currentWord.substring(0, charIndex--);
 
             if (charIndex < 0) {
 
                 deleting = false;
 
-                wordIndex = (wordIndex + 1) % words.length;
+                wordIndex =
+
+                    (wordIndex + 1) % words.length;
 
             }
 
         }
 
-        setTimeout(type, deleting ? 45 : 90);
+        setTimeout(type, deleting ? 50 : 90);
 
     }
 
@@ -339,175 +288,110 @@ function initTyping() {
 
 }
 
-/* =====================================================
-   THEME TOGGLE
-===================================================== */
+/* ==========================================================
+   Animated Counters
+========================================================== */
 
-function initThemeToggle() {
+function initCounters() {
 
-    const button = document.getElementById("theme-toggle");
+    const counters =
 
-    if (!button) return;
+        document.querySelectorAll("[data-count]");
 
-    const savedTheme = localStorage.getItem("theme");
+    if (!counters.length) return;
 
-    if (savedTheme === "light") {
+    const observer = new IntersectionObserver(
 
-        document.body.classList.add("light-theme");
+        entries => {
 
-    }
+            entries.forEach(entry => {
 
-    button.addEventListener("click", () => {
+                if (!entry.isIntersecting) return;
 
-        document.body.classList.toggle("light-theme");
+                const counter = entry.target;
 
-        const current = document.body.classList.contains("light-theme")
-            ? "light"
-            : "dark";
+                const targetValue =
 
-        localStorage.setItem("theme", current);
+                    parseInt(counter.dataset.count);
 
-    });
+                let value = 0;
 
-}
+                const speed =
 
-/* =====================================================
-   CONTACT FORM
-===================================================== */
+                    Math.max(10, targetValue / 100);
 
-(function () {
+                const update = () => {
 
-    const form = document.getElementById("contact-form");
+                    value += speed;
 
-    if (!form) return;
+                    if (value >= targetValue) {
 
-    form.addEventListener("submit", function () {
+                        counter.textContent =
 
-        const button = form.querySelector("button");
+                            targetValue;
 
-        if (button) {
+                        return;
 
-            button.disabled = true;
+                    }
 
-            button.innerHTML = "Sending...";
+                    counter.textContent =
+
+                        Math.floor(value);
+
+                    requestAnimationFrame(update);
+
+                };
+
+                update();
+
+                observer.unobserve(counter);
+
+            });
+
+        },
+
+        {
+
+            threshold: 0.5
 
         }
 
-        setTimeout(() => {
+    );
 
-            if (button) {
+    counters.forEach(counter => {
 
-                button.disabled = false;
-
-                button.innerHTML = "Send Message";
-
-            }
-
-        }, 2500);
+        observer.observe(counter);
 
     });
-
-})();
-
-/* =====================================================
-   AOS
-===================================================== */
-
-function initAOS() {
-
-    if (typeof AOS !== "undefined") {
-
-        AOS.init({
-
-            duration: 900,
-
-            easing: "ease-out-cubic",
-
-            once: true,
-
-            offset: 80
-
-        });
-
-    }
 
 }
 
-/* =====================================================
-   CURSOR GLOW
-===================================================== */
+/* ==========================================================
+   Mobile Navigation
+========================================================== */
 
-(function () {
+const menuButton = document.querySelector(".menu-btn");
 
-    const cursor = document.querySelector(".cursor-glow");
+const navLinks = document.querySelector(".nav-links");
 
-    if (!cursor) return;
+if (menuButton && navLinks) {
 
-    document.addEventListener("mousemove", e => {
+    menuButton.addEventListener("click", () => {
 
-        cursor.style.left = e.clientX + "px";
-
-        cursor.style.top = e.clientY + "px";
+        navLinks.classList.toggle("active");
 
     });
 
-})();
+    document.querySelectorAll(".nav-links a")
 
-/* =====================================================
-   PARALLAX HERO
-===================================================== */
+        .forEach(link => {
 
-(function () {
+            link.addEventListener("click", () => {
 
-    const consoleCard = document.querySelector(".hero-console");
+                navLinks.classList.remove("active");
 
-    if (!consoleCard) return;
+            });
 
-    window.addEventListener("mousemove", e => {
-
-        const x = (window.innerWidth / 2 - e.clientX) / 45;
-
-        const y = (window.innerHeight / 2 - e.clientY) / 45;
-
-        consoleCard.style.transform =
-            `rotate(-7deg) rotateX(${y}deg) rotateY(${-x}deg)`;
-
-    });
-
-})();
-
-/* =====================================================
-   YEAR
-===================================================== */
-
-(function () {
-
-    const year = document.getElementById("year");
-
-    if (year) {
-
-        year.textContent = new Date().getFullYear();
-
-    }
-
-})();
-
-/* =====================================================
-   PERFORMANCE
-===================================================== */
-
-window.addEventListener("pageshow", () => {
-
-    document.body.classList.remove("loading");
-
-});
-
-/* =====================================================
-   GITHUB
-===================================================== */
-
-if (typeof loadGithubProjects === "function") {
-
-    loadGithubProjects();
+        });
 
 }
