@@ -1,197 +1,251 @@
-/**
- * particles.js - Particle Background Effect
- * Creates an interactive particle network background
- * Lightweight implementation with canvas
- */
+/* =====================================================
+   PARTICLES BACKGROUND
+   Portfolio Website
+===================================================== */
 
-(function() {
-  'use strict';
+document.addEventListener("DOMContentLoaded", () => {
 
-  // Only run on desktop (performance optimization)
-  const isMobile = window.innerWidth < 768;
-  if (isMobile) {
-    console.log('Particles disabled on mobile for performance');
-    return;
-  }
+    if (typeof particlesJS === "undefined") {
 
-  // Configuration
-  const CONFIG = {
-    particleCount: 80,
-    lineDistance: 150,
-    particleSize: 2,
-    speed: 0.5,
-    color: '#6b4c7a',
-    opacity: 0.3
-  };
+        console.warn("particles.js library not found.");
 
-  // Canvas setup
-  const canvas = document.createElement('canvas');
-  canvas.id = 'particles-canvas';
-  canvas.style.cssText = `
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.5;
-  `;
-  document.body.prepend(canvas);
+        return;
 
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  let animationId = null;
-
-  /**
-   * Resize canvas to fill window
-   */
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-
-  /**
-   * Particle class
-   */
-  class Particle {
-    constructor() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.vx = (Math.random() - 0.5) * CONFIG.speed;
-      this.vy = (Math.random() - 0.5) * CONFIG.speed;
-      this.radius = Math.random() * CONFIG.particleSize + 1;
     }
 
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
+    particlesJS("particles-js", {
 
-      // Bounce off edges
-      if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-      if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-    }
+        particles: {
 
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = CONFIG.color;
-      ctx.globalAlpha = CONFIG.opacity;
-      ctx.fill();
-      ctx.globalAlpha = 1;
-    }
-  }
+            number: {
 
-  /**
-   * Initialize particles
-   */
-  function initParticles() {
-    particles = [];
-    for (let i = 0; i < CONFIG.particleCount; i++) {
-      particles.push(new Particle());
-    }
-  }
+                value: 70,
 
-  /**
-   * Draw lines between nearby particles
-   */
-  function drawLines() {
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
+                density: {
 
-        if (distance < CONFIG.lineDistance) {
-          const opacity = 1 - (distance / CONFIG.lineDistance);
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = CONFIG.color;
-          ctx.globalAlpha = opacity * 0.3;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
-          ctx.globalAlpha = 1;
-        }
-      }
-    }
-  }
+                    enable: true,
 
-  /**
-   * Animation loop
-   */
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    value_area: 900
 
-    particles.forEach(particle => {
-      particle.update();
-      particle.draw();
+                }
+
+            },
+
+            color: {
+
+                value: [
+                    "#7C3AED",
+                    "#14B8A6",
+                    "#FF6B6B"
+                ]
+
+            },
+
+            shape: {
+
+                type: "circle"
+
+            },
+
+            opacity: {
+
+                value: 0.45,
+
+                random: true,
+
+                anim: {
+
+                    enable: true,
+
+                    speed: 0.8,
+
+                    opacity_min: 0.1,
+
+                    sync: false
+
+                }
+
+            },
+
+            size: {
+
+                value: 3,
+
+                random: true,
+
+                anim: {
+
+                    enable: true,
+
+                    speed: 2,
+
+                    size_min: 0.5,
+
+                    sync: false
+
+                }
+
+            },
+
+            line_linked: {
+
+                enable: true,
+
+                distance: 140,
+
+                color: "#7C3AED",
+
+                opacity: 0.22,
+
+                width: 1
+
+            },
+
+            move: {
+
+                enable: true,
+
+                speed: 1.6,
+
+                direction: "none",
+
+                random: false,
+
+                straight: false,
+
+                out_mode: "out",
+
+                bounce: false,
+
+                attract: {
+
+                    enable: false
+
+                }
+
+            }
+
+        },
+
+        interactivity: {
+
+            detect_on: "canvas",
+
+            events: {
+
+                onhover: {
+
+                    enable: true,
+
+                    mode: "grab"
+
+                },
+
+                onclick: {
+
+                    enable: true,
+
+                    mode: "push"
+
+                },
+
+                resize: true
+
+            },
+
+            modes: {
+
+                grab: {
+
+                    distance: 170,
+
+                    line_linked: {
+
+                        opacity: 0.45
+
+                    }
+
+                },
+
+                bubble: {
+
+                    distance: 220,
+
+                    size: 6,
+
+                    duration: 2,
+
+                    opacity: 0.6,
+
+                    speed: 3
+
+                },
+
+                repulse: {
+
+                    distance: 120,
+
+                    duration: 0.4
+
+                },
+
+                push: {
+
+                    particles_nb: 4
+
+                },
+
+                remove: {
+
+                    particles_nb: 2
+
+                }
+
+            }
+
+        },
+
+        retina_detect: true
+
     });
 
-    drawLines();
-    animationId = requestAnimationFrame(animate);
-  }
+});
 
-  /**
-   * Start particle animation
-   */
-  function startParticles() {
-    resizeCanvas();
-    initParticles();
-    
-    if (animationId) {
-      cancelAnimationFrame(animationId);
-    }
-    animate();
-  }
+/* =====================================================
+   OPTIONAL PARALLAX EFFECT
+===================================================== */
 
-  /**
-   * Stop particle animation
-   */
-  function stopParticles() {
-    if (animationId) {
-      cancelAnimationFrame(animationId);
-      animationId = null;
-    }
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  }
+(function () {
 
-  // ========================================
-  // Event Listeners
-  // ========================================
+    const canvas = document.getElementById("particles-js");
 
-  // Debounced resize handler
-  let resizeTimeout;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-      resizeCanvas();
-      initParticles();
-    }, 250);
-  });
+    if (!canvas) return;
 
-  // Stop particles when tab is hidden (performance)
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      stopParticles();
-    } else {
-      startParticles();
-    }
-  });
+    document.addEventListener("mousemove", (event) => {
 
-  // ========================================
-  // Initialize
-  // ========================================
+        const x = (event.clientX / window.innerWidth - 0.5) * 20;
 
-  // Start after DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', startParticles);
-  } else {
-    startParticles();
-  }
+        const y = (event.clientY / window.innerHeight - 0.5) * 20;
 
-  // Cleanup on page unload
-  window.addEventListener('beforeunload', stopParticles);
+        canvas.style.transform =
+            `translate(${x}px, ${y}px)`;
 
-  console.log('✨ Particles initialized');
+    });
+
 })();
+
+/* =====================================================
+   REDUCE MOTION SUPPORT
+===================================================== */
+
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+
+    const particles = document.getElementById("particles-js");
+
+    if (particles) {
+
+        particles.style.display = "none";
+
+    }
+
+}
