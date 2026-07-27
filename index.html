@@ -1,769 +1,1168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dipayan Mahato · Python &amp; AI Engineer</title>
-  
-  <!-- SEO & Meta Tags -->
-  <meta name="description" content="Portfolio of Dipayan Mahato - Python Developer and Applied AI Engineer specializing in FastAPI, LangChain, and intelligent systems." />
-  <meta name="keywords" content="Python Developer, AI Engineer, FastAPI, LangChain, Machine Learning" />
-  <meta name="theme-color" content="#0f0b16" />
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="Dipayan Mahato · Python &amp; AI Engineer" />
-  <meta property="og:description" content="Building intelligent systems with Python, FastAPI, and LangChain." />
-  <meta property="og:image" content="https://dipayan3203.vercel.app/assets/images/og-image.jpg" />
-  <meta property="og:url" content="https://dipayan3203.vercel.app" />
-  <meta name="twitter:card" content="summary_large_image" />
-  
-  <!-- Canonical -->
-  <link rel="canonical" href="https://dipayan3203.vercel.app" />
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
-  
-  <!-- Preconnect for Performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@300;400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  
-  <!-- Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  
-  <style>
-    /* ========================================
-       style.css - Core Styles (Dark Theme)
-       ======================================== */
-    
-    /* ----- Reset & Base ----- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    html {
-      scroll-behavior: smooth;
-    }
+    <title>Dipayan Mahato | Python Developer & Applied AI Engineer</title>
 
-    body {
-      background: #0f0b16;
-      font-family: 'Lato', sans-serif;
-      color: #e8e0f0;
-      line-height: 1.6;
-      padding: 2rem 1.5rem;
-      min-height: 100vh;
-    }
+    <meta name="description"
+        content="Portfolio of Dipayan Mahato, Python Developer & Applied AI Engineer specializing in FastAPI, AI, Automation, Backend Development and Payment Systems." />
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      background: rgba(20, 14, 30, 0.85);
-      backdrop-filter: blur(10px);
-      border-radius: 2.5rem;
-      padding: 2rem 2.5rem;
-      box-shadow: 0 20px 60px -12px rgba(0, 0, 0, 0.8);
-      border: 1px solid rgba(107, 76, 122, 0.2);
-    }
+    <meta name="keywords"
+        content="Dipayan Mahato, Python Developer, FastAPI, AI Engineer, LangChain, Backend Developer, Portfolio, PostgreSQL, Docker" />
 
-    /* ----- Typography ----- */
-    h1, h2, h3, h4 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
+    <meta name="author" content="Dipayan Mahato" />
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #e8e0f0;
-      border-left: 6px solid #b36b7b;
-      padding-left: 1rem;
-    }
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dipayan Mahato | Portfolio">
+    <meta property="og:description"
+        content="Python Developer & Applied AI Engineer building scalable backend systems and AI-powered applications.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/preview.png">
 
-    .code-font {
-      font-family: 'JetBrains Mono', monospace;
-    }
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon/favicon.ico">
 
-    /* ----- Colors (Dark Theme) ----- */
-    :root {
-      --violet: #8b6fa0;
-      --coral: #d47a8a;
-      --teal: #3da896;
-      --dark: #0f0b16;
-      --card-bg: rgba(30, 22, 44, 0.8);
-      --border-glow: rgba(107, 76, 122, 0.3);
-    }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    /* ----- Hero ----- */
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2.5rem;
-      margin-bottom: 3.5rem;
-      padding: 0.5rem 0;
-    }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
 
-    .hero-content {
-      flex: 1 1 300px;
-    }
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    .hero-content .badge {
-      display: inline-block;
-      background: rgba(107, 76, 122, 0.25);
-      color: #c4b0d4;
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 0.25rem 1rem;
-      border-radius: 40px;
-      letter-spacing: 0.3px;
-      margin-bottom: 0.75rem;
-      font-family: 'Poppins', sans-serif;
-      border: 1px solid rgba(107, 76, 122, 0.3);
-    }
+    <!-- AOS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
-    .hero-content h1 {
-      font-size: 3rem;
-      line-height: 1.2;
-      margin-bottom: 0.5rem;
-      color: #f0ecf5;
-    }
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
-    .hero-content h1 span {
-      background: linear-gradient(135deg, #8b6fa0 0%, #d47a8a 80%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-sub {
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: #b0a8c0;
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem 1.2rem;
-      align-items: center;
-    }
-
-    /* ----- Buttons ----- */
-    .btn {
-      display: inline-block;
-      background: #2d1b3d;
-      color: #f0ecf5;
-      padding: 0.6rem 1.8rem;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: 0.3s;
-      border: 1px solid rgba(107, 76, 122, 0.3);
-      cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .btn:hover {
-      background: #4a2e5e;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(107, 76, 122, 0.3);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 2px solid #8b6fa0;
-      color: #e8e0f0;
-    }
-
-    .btn-outline:hover {
-      background: rgba(107, 76, 122, 0.2);
-      border-color: #a888b8;
-    }
-
-    .btn-teal {
-      background: #2b8c7c;
-      border-color: #2b8c7c;
-    }
-    .btn-teal:hover {
-      background: #3da896;
-      border-color: #3da896;
-    }
-
-    /* ----- Code Console ----- */
-    .code-console {
-      flex: 1 1 340px;
-      background: #0f0b16;
-      border-radius: 24px;
-      padding: 1.8rem 1.5rem 1.5rem 1.5rem;
-      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
-      transform: rotate(1.5deg);
-      transition: transform 0.2s ease;
-      border: 1px solid rgba(107, 76, 122, 0.3);
-    }
-
-    .code-console:hover {
-      transform: rotate(0deg) scale(1.01);
-    }
-
-    .console-header {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 1.2rem;
-    }
-
-    .console-dot {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #d47a8a;
-    }
-    .console-dot:nth-child(2) { background: #e0b35a; }
-    .console-dot:nth-child(3) { background: #3da896; }
-
-    .console-code {
-      color: #d4d0dc;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
-      line-height: 1.8;
-      background: #0a0710;
-      padding: 1rem 1rem 0.8rem 1rem;
-      border-radius: 14px;
-      margin-bottom: 1.2rem;
-      overflow-x: auto;
-      white-space: pre-wrap;
-      word-break: break-word;
-      border: 1px solid rgba(107, 76, 122, 0.15);
-    }
-
-    .console-code .key { color: #b38fcf; }
-    .console-code .str { color: #89d4c0; }
-    .console-code .fn { color: #e8b88a; }
-    .console-code .cmt { color: #6a5f7a; font-style: italic; }
-
-    /* ----- Stack Chips ----- */
-    .stack-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 0.2rem;
-    }
-
-    .chip {
-      background: rgba(45, 27, 61, 0.6);
-      color: #d4c8e0;
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
-      letter-spacing: 0.3px;
-      font-family: 'Poppins', sans-serif;
-      border: 1px solid rgba(107, 76, 122, 0.25);
-      backdrop-filter: blur(4px);
-    }
-
-    .chip i {
-      margin-right: 5px;
-      font-size: 0.7rem;
-    }
-
-    /* ----- Section & Cards ----- */
-    .section {
-      margin-top: 3.5rem;
-    }
-
-    .grid-2col {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.8rem;
-    }
-
-    .card {
-      background: rgba(30, 22, 44, 0.7);
-      backdrop-filter: blur(4px);
-      padding: 1.5rem 1.5rem 1.8rem;
-      border-radius: 28px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(107, 76, 122, 0.15);
-      transition: 0.3s;
-      color: #e0d8ec;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 40px -12px rgba(107, 76, 122, 0.3);
-      border-color: rgba(107, 76, 122, 0.4);
-    }
-
-    .card-icon {
-      font-size: 2rem;
-      color: #8b6fa0;
-      margin-bottom: 0.6rem;
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.3rem;
-      color: #f0ecf5;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: #b0a8c0;
-    }
-
-    .card .meta {
-      font-size: 0.8rem;
-      color: #8a7a9a;
-      display: flex;
-      gap: 1rem;
-      margin-top: 0.6rem;
-      flex-wrap: wrap;
-    }
-
-    .card .meta i {
-      margin-right: 4px;
-    }
-
-    .card .repo-link {
-      display: inline-block;
-      margin-top: 0.8rem;
-      color: #3da896;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    .card .repo-link i {
-      margin-left: 4px;
-      transition: 0.2s;
-    }
-
-    .card .repo-link:hover i {
-      transform: translateX(4px);
-    }
-
-    .repo-lang {
-      display: inline-block;
-      background: rgba(107, 76, 122, 0.2);
-      padding: 0.1rem 0.8rem;
-      border-radius: 30px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: #b0a8c0;
-      border: 1px solid rgba(107, 76, 122, 0.15);
-    }
-
-    /* ----- Contact Form ----- */
-    .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-      background: rgba(20, 14, 30, 0.6);
-      backdrop-filter: blur(8px);
-      padding: 2rem 2rem 2.2rem;
-      border-radius: 2rem;
-      border: 1px solid rgba(107, 76, 122, 0.2);
-    }
-
-    .form-group {
-      margin-bottom: 1.2rem;
-    }
-
-    .form-label {
-      display: block;
-      font-weight: 600;
-      font-size: 0.9rem;
-      margin-bottom: 0.3rem;
-      color: #d4c8e0;
-    }
-
-    .form-input, .form-textarea {
-      width: 100%;
-      padding: 0.7rem 1rem;
-      border-radius: 40px;
-      border: 1px solid rgba(107, 76, 122, 0.25);
-      background: rgba(15, 11, 22, 0.6);
-      color: #e8e0f0;
-      font-family: 'Lato', sans-serif;
-      transition: 0.3s;
-    }
-
-    .form-input::placeholder, .form-textarea::placeholder {
-      color: #6a5a7a;
-    }
-
-    .form-input:focus, .form-textarea:focus {
-      outline: none;
-      border-color: #8b6fa0;
-      box-shadow: 0 0 0 3px rgba(107, 76, 122, 0.2);
-      background: rgba(15, 11, 22, 0.8);
-    }
-
-    .form-textarea {
-      border-radius: 20px;
-      min-height: 100px;
-      resize: vertical;
-    }
-
-    .btn-submit {
-      background: #2d1b3d;
-      color: #f0ecf5;
-      border: 1px solid rgba(107, 76, 122, 0.3);
-      padding: 0.7rem 2rem;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .btn-submit:hover {
-      background: #4a2e5e;
-      transform: scale(1.02);
-      box-shadow: 0 8px 25px rgba(107, 76, 122, 0.3);
-    }
-
-    .btn-submit svg {
-      stroke: currentColor;
-    }
-
-    /* ----- Footer ----- */
-    .footer {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(107, 76, 122, 0.2);
-      text-align: center;
-    }
-
-    .footer-logo {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #e8e0f0;
-    }
-
-    .footer-logo span {
-      color: #d47a8a;
-    }
-
-    .footer-text {
-      margin: 0.3rem 0 0.8rem;
-      color: #8a7a9a;
-      font-size: 0.9rem;
-    }
-
-    .footer-back-to-top {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: #8b6fa0;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .footer-back-to-top:hover {
-      color: #a888b8;
-    }
-
-    .footer-back-to-top svg {
-      stroke: currentColor;
-    }
-
-    /* ----- Alert ----- */
-    .form-alert {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #2b8c7c;
-      color: #f0ecf5;
-      padding: 1rem 2rem;
-      border-radius: 60px;
-      font-weight: 600;
-      box-shadow: 0 8px 24px rgba(43, 140, 124, 0.3);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      transform: translateY(120px);
-      opacity: 0;
-      transition: 0.4s;
-      z-index: 999;
-      font-family: 'Poppins', sans-serif;
-      border: 1px solid rgba(107, 76, 122, 0.2);
-    }
-
-    .form-alert.show {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    .form-alert-icon {
-      background: #f0ecf5;
-      color: #2b8c7c;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-    }
-
-    /* ========================================
-       responsive.css - Media Queries
-       ======================================== */
-    @media (max-width: 1024px) {
-      .container { padding: 1.8rem; }
-      .hero-content h1 { font-size: 2.8rem; }
-    }
-
-    @media (max-width: 768px) {
-      body { padding: 1.5rem 1rem; }
-      .container { padding: 1.5rem; border-radius: 2rem; }
-      .hero { flex-direction: column; gap: 2rem; }
-      .hero-content { flex: 1 1 100%; text-align: center; }
-      .hero-content h1 { font-size: 2.5rem; }
-      .hero-cta { justify-content: center; }
-      .code-console { flex: 1 1 100%; transform: rotate(0deg); max-width: 100%; }
-      .code-console:hover { transform: scale(1.01); }
-      h2 { font-size: 1.6rem; padding-left: 0.8rem; }
-      .grid-2col { grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-      .card { padding: 1.2rem; }
-      .contact-form { padding: 1.5rem; }
-    }
-
-    @media (max-width: 480px) {
-      body { padding: 1rem 0.8rem; }
-      .container { padding: 1rem; border-radius: 1.5rem; }
-      .hero-content h1 { font-size: 2rem; }
-      .hero-sub { font-size: 1rem; }
-      .grid-2col { grid-template-columns: 1fr; gap: 1rem; }
-      .btn { padding: 0.5rem 1.4rem; font-size: 0.85rem; }
-      .code-console { padding: 1.2rem 1rem; }
-      .console-code { font-size: 0.7rem; padding: 0.8rem; }
-      .chip { font-size: 0.6rem; padding: 0.2rem 0.8rem; }
-      h2 { font-size: 1.3rem; padding-left: 0.6rem; }
-      .form-input, .form-textarea { padding: 0.6rem 0.8rem; font-size: 0.9rem; }
-      .btn-submit { padding: 0.6rem 1.5rem; font-size: 0.9rem; width: 100%; justify-content: center; }
-      .form-alert { bottom: 20px; right: 20px; left: 20px; padding: 0.8rem 1.2rem; font-size: 0.9rem; text-align: center; }
-      .footer-logo { font-size: 1.1rem; }
-      .footer-text { font-size: 0.8rem; }
-    }
-
-    @media (max-width: 360px) {
-      .hero-content h1 { font-size: 1.6rem; }
-      .badge { font-size: 0.7rem; padding: 0.2rem 0.8rem; }
-      .container { padding: 0.8rem; }
-    }
-
-    /* ========================================
-       animations.css - Animations & Transitions
-       ======================================== */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-
-    .console-code {
-      animation: fadeInUp 0.8s ease-out;
-    }
-
-    .stack-chips .chip:nth-child(1) { animation: fadeInUp 0.4s ease-out 0.3s both; }
-    .stack-chips .chip:nth-child(2) { animation: fadeInUp 0.4s ease-out 0.5s both; }
-    .stack-chips .chip:nth-child(3) { animation: fadeInUp 0.4s ease-out 0.7s both; }
-    .stack-chips .chip:nth-child(4) { animation: fadeInUp 0.4s ease-out 0.9s both; }
-
-    .card {
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-                  box-shadow 0.3s ease,
-                  border-color 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px) scale(1.01);
-    }
-
-    .section {
-      opacity: 0;
-      animation: fadeInUp 0.8s ease-out forwards;
-    }
-
-    .section:nth-child(1) { animation-delay: 0.1s; }
-    .section:nth-child(2) { animation-delay: 0.3s; }
-    .section:nth-child(3) { animation-delay: 0.5s; }
-    .section:nth-child(4) { animation-delay: 0.7s; }
-    .section:nth-child(5) { animation-delay: 0.9s; }
-
-    /* Glow Card Effect */
-    .glow-card {
-      position: relative;
-      background: rgba(20, 14, 30, 0.6);
-      border: 1px solid rgba(107, 76, 122, 0.2);
-    }
-
-    .glow-card::before {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border-radius: 2rem;
-      padding: 1px;
-      background: linear-gradient(135deg, #8b6fa0, #d47a8a, #3da896);
-      background-size: 300% 300%;
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      animation: shimmer 6s ease-in-out infinite;
-      z-index: -1;
-      opacity: 0.3;
-    }
-
-    @keyframes shimmer {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* Social links hover */
-    .social-link {
-      transition: all 0.3s ease;
-    }
-    .social-link:hover {
-      transform: translateY(-4px) scale(1.1);
-    }
-  </style>
 </head>
+
 <body>
-  <div class="container">
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="hero">
-      <div class="hero-content">
-        <div class="badge"><i class="fas fa-code"></i> Python &amp; AI</div>
-        <h1>Dipayan <span>Mahato</span></h1>
-        <p class="hero-sub">Python Developer · Applied AI Engineer</p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn">View Projects</a>
-          <a href="#contact" class="btn btn-outline">Let's Talk</a>
-        </div>
-      </div>
-      <!-- Code Console -->
-      <div class="code-console">
-        <div class="console-header">
-          <span class="console-dot"></span>
-          <span class="console-dot"></span>
-          <span class="console-dot"></span>
-        </div>
-        <div class="console-code">
-          <span class="cmt"># FastAPI + LangChain</span><br>
-          <span class="key">from</span> fastapi <span class="key">import</span> FastAPI<br>
-          <span class="key">from</span> langchain.llms <span class="key">import</span> <span class="fn">OpenAI</span><br><br>
-          app = <span class="fn">FastAPI</span>()<br><br>
-          <span class="key">@app</span>.<span class="fn">get</span>(<span class="str">"/ask"</span>)<br>
-          <span class="key">async def</span> <span class="fn">ask</span>(q: <span class="key">str</span>):<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">return</span> {<span class="str">"answer"</span>: llm(q)}
-        </div>
-        <div class="stack-chips">
-          <span class="chip"><i class="fab fa-python"></i> Python</span>
-          <span class="chip"><i class="fas fa-bolt"></i> FastAPI</span>
-          <span class="chip"><i class="fas fa-brain"></i> LangChain</span>
-          <span class="chip"><i class="fas fa-cloud"></i> Docker</span>
-        </div>
-      </div>
-    </section>
 
-    <!-- ===== ABOUT ===== -->
-    <section class="section" id="about">
-      <h2><i class="fas fa-user-astronaut" style="margin-right:10px;color:#8b6fa0;"></i> About</h2>
-      <div class="card" style="max-width:800px;">
-        <p style="font-size:1.05rem;">I'm Dipayan Mahato, a Python Developer and Applied AI Engineer passionate about building intelligent systems. I blend backend engineering with machine learning to create products that are both robust and innovative. Currently exploring LLMs, agentic workflows, and scalable APIs.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:1.2rem;">
-          <span class="chip" style="background:#3da896;color:white;"><i class="fas fa-map-pin"></i> Kolkata, India</span>
-          <span class="chip" style="background:#8b6fa0;color:white;"><i class="fas fa-graduation-cap"></i> B.Tech CSE, NIT Durgapur</span>
-          <span class="chip" style="background:#d47a8a;color:white;"><i class="fas fa-code-branch"></i> 10+ repos</span>
+<div id="loader">
+    <span class="loader-ring"></span>
+</div>
+
+<div id="progress-bar"></div>
+
+<div class="cursor-glow"></div>
+
+<header>
+
+<nav class="navbar">
+
+<div class="container">
+
+<a href="#" class="logo">
+
+<span class="logo-primary">Dipayan</span>
+
+<span class="logo-secondary">.</span>
+
+</a>
+
+<ul class="nav-links">
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#stack">Stack</a></li>
+
+<li><a href="#experience">Experience</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="nav-social">
+
+<a href="https://github.com/dipayan3203" target="_blank">
+
+<i class="fab fa-github"></i>
+
+</a>
+
+<a href="#" target="_blank">
+
+<i class="fab fa-linkedin"></i>
+
+</a>
+
+<button id="theme-toggle">
+
+<i class="fas fa-moon"></i>
+
+</button>
+
+</div>
+
+<div class="menu-btn">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+<main>
+
+<section id="hero">
+
+<div id="particles-js"></div>
+
+<div class="container hero-grid">
+
+<div class="hero-content" data-aos="fade-right">
+
+<span class="hero-tag">
+
+Python Developer • Applied AI Engineer
+
+</span>
+
+<h1>
+
+Hi, I'm
+
+<span>Dipayan Mahato</span>
+
+</h1>
+
+<h2>
+
+Building Scalable Backend Systems,
+
+AI Applications,
+
+Automation,
+
+and Payment Infrastructure.
+
+</h2>
+
+<p>
+
+I build production-ready backend applications using Python, FastAPI,
+PostgreSQL, Docker, AI frameworks, and cloud technologies.
+My focus is creating scalable APIs, intelligent automation,
+LLM-powered systems, and modern payment platforms.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="btn primary">
+
+View Projects
+
+</a>
+
+<a href="#contact" class="btn secondary">
+
+Contact Me
+
+</a>
+
+<a href="assets/resume.pdf"
+
+download
+
+class="btn outline">
+
+Download Resume
+
+</a>
+
+</div>
+
+<div class="hero-social">
+
+<a href="https://github.com/dipayan3203" target="_blank">
+
+<i class="fab fa-github"></i>
+
+</a>
+
+<a href="#" target="_blank">
+
+<i class="fab fa-linkedin"></i>
+
+</a>
+
+<a href="mailto:your@email.com">
+
+<i class="fas fa-envelope"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-console"
+
+data-aos="fade-left">
+
+<div class="window-controls">
+
+<span></span>
+
+<span></span>
+
+<span></span>
+
+</div>
+
+<div class="console-header">
+
+backend.py
+
+</div>
+
+<pre><code>
+
+from fastapi import FastAPI
+
+from langgraph.graph import StateGraph
+
+from app.services.payment import create_payment
+
+app = FastAPI()
+
+graph = StateGraph()
+
+@app.post("/payments")
+
+async def payment():
+
+    result = await create_payment()
+
+    return {
+
+        "status":"success",
+
+        "engine":"Swift Pay",
+
+        "backend":"FastAPI"
+
+    }
+
+</code></pre>
+
+<div class="floating-chip chip1">
+
+Python
+
+</div>
+
+<div class="floating-chip chip2">
+
+FastAPI
+
+</div>
+
+<div class="floating-chip chip3">
+
+Docker
+
+</div>
+
+<div class="floating-chip chip4">
+
+PostgreSQL
+
+</div>
+
+<div class="floating-chip chip5">
+
+LangChain
+
+</div>
+
+<div class="floating-chip chip6">
+
+AWS
+
+</div>
+
+<div class="floating-chip chip7">
+
+Redis
+
+</div>
+
+</div>
+
+</div>
+
+</section><!-- ========================================= -->
+<!-- ABOUT -->
+<!-- ========================================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+            <span>ABOUT ME</span>
+            <h2>Backend Engineer Building Intelligent Systems</h2>
         </div>
-      </div>
-    </section>
 
-    <!-- ===== EDUCATION ===== -->
-    <section class="section" id="education">
-      <h2><i class="fas fa-university" style="margin-right:10px;color:#8b6fa0;"></i> Education</h2>
-      <div class="card" style="max-width:800px;">
-        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:0.5rem;">
-          <i class="fas fa-graduation-cap" style="font-size:2rem;color:#d47a8a;"></i>
-          <div>
-            <h3 style="color:#f0ecf5;">National Institute of Technology, Durgapur</h3>
-            <p style="color:#b0a8c0;">Bachelor of Technology in Computer Science &amp; Engineering</p>
-            <p style="color:#8a7a9a;font-size:0.9rem;">2020 – 2024 · CGPA: 8.5/10</p>
-          </div>
+        <div class="about-grid">
+
+            <div class="about-text" data-aos="fade-right">
+
+                <p>
+                    I'm <strong>Dipayan Mahato</strong>, a Python Developer and
+                    Applied AI Engineer passionate about building scalable
+                    backend architectures, intelligent automation workflows,
+                    REST APIs, and AI-powered applications.
+                </p>
+
+                <p>
+                    My primary stack includes Python, FastAPI, PostgreSQL,
+                    Docker, LangChain, LangGraph, and cloud technologies.
+                    I enjoy solving real-world engineering problems through
+                    clean architecture and production-ready software.
+                </p>
+
+                <p>
+                    Recently I've been focusing on backend infrastructure,
+                    payment systems, Retrieval-Augmented Generation (RAG),
+                    LLM applications, workflow automation, and developer tools.
+                </p>
+
+                <div class="about-highlights">
+
+                    <div class="highlight-card">
+                        <h3>2+</h3>
+                        <span>Years Experience</span>
+                    </div>
+
+                    <div class="highlight-card">
+                        <h3>20+</h3>
+                        <span>Projects Built</span>
+                    </div>
+
+                    <div class="highlight-card">
+                        <h3>AI</h3>
+                        <span>Automation Focus</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="about-skills" data-aos="fade-left">
+
+                <div class="skill-box">
+                    <i class="fa-solid fa-server"></i>
+                    <h4>Backend Development</h4>
+                    <p>FastAPI, Flask, Django, REST APIs</p>
+                </div>
+
+                <div class="skill-box">
+                    <i class="fa-solid fa-robot"></i>
+                    <h4>Applied AI</h4>
+                    <p>LangChain, LangGraph, Gemini, OpenAI</p>
+                </div>
+
+                <div class="skill-box">
+                    <i class="fa-solid fa-database"></i>
+                    <h4>Database Design</h4>
+                    <p>PostgreSQL, MySQL, Redis, SQLAlchemy</p>
+                </div>
+
+                <div class="skill-box">
+                    <i class="fa-solid fa-cloud"></i>
+                    <h4>Deployment</h4>
+                    <p>Docker, AWS, GitHub Actions</p>
+                </div>
+
+            </div>
+
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:0.8rem;border-top:1px solid rgba(107,76,122,0.15);padding-top:0.8rem;">
-          <span class="chip"><i class="fas fa-star"></i> Merit Scholarship</span>
-          <span class="chip"><i class="fas fa-trophy"></i> Best Project Award</span>
-          <span class="chip"><i class="fas fa-users"></i> Coding Club Lead</span>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- TECH STACK -->
+<!-- ========================================= -->
+
+<section id="stack">
+
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+
+            <span>TECH STACK</span>
+
+            <h2>Technologies I Use</h2>
+
         </div>
-      </div>
-    </section>
 
-    <!-- ===== TECH STACK ===== -->
-    <section class="section" id="techstack">
-      <h2><i class="fas fa-layer-group" style="margin-right:10px;color:#8b6fa0;"></i> Tech Stack</h2>
-      
-      <h3 style="margin-top:1.5rem;margin-bottom:1rem;color:#d4c8e0;">
-        <i class="fas fa-code" style="color:#8b6fa0;margin-right:8px;"></i> Languages
-      </h3>
-      <div class="grid-2col">
-        <div class="card"><i class="fab fa-python card-icon"></i><h3>Python</h3><p>Expert · 5+ years · FastAPI, Django, Flask, NumPy, Pandas</p></div>
-        <div class="card"><i class="fab fa-js card-icon"></i><h3>JavaScript</h3><p>Advanced · React, Node.js, Express, TypeScript</p></div>
-        <div class="card"><i class="fas fa-database card-icon"></i><h3>SQL</h3><p>PostgreSQL, MySQL, SQLite, Query Optimization</p></div>
-        <div class="card"><i class="fas fa-terminal card-icon"></i><h3>Shell</h3><p>Bash, Zsh, Automation, CI/CD Scripts</p></div>
-      </div>
+        <div class="stack-grid">
 
-      <h3 style="margin-top:2rem;margin-bottom:1rem;color:#d4c8e0;">
-        <i class="fas fa-cubes" style="color:#d47a8a;margin-right:8px;"></i> Frameworks &amp; Libraries
-      </h3>
-      <div class="grid-2col">
-        <div class="card"><i class="fas fa-bolt card-icon"></i><h3>FastAPI</h3><p>Async APIs, OpenAPI, WebSockets, Dependency Injection</p></div>
-        <div class="card"><i class="fas fa-robot card-icon"></i><h3>LangChain</h3><p>LLM Orchestration, Agents, Chains, RAG Pipelines</p></div>
-        <div class="card"><i class="fas fa-network-wired card-icon"></i><h3>Django</h3><p>Full-Stack Framework, ORM, Admin, REST Framework</p></div>
-        <div class="card"><i class="fab fa-react card-icon"></i><h3>React</h3><p>Hooks, State Management, Next.js, Component Libraries</p></div>
-      </div>
+            <!-- Backend -->
 
-      <h3 style="margin-top:2rem;margin-bottom:1rem;color:#d4c8e0;">
-        <i class="fas fa-cloud" style="color:#3da896;margin-right:8px;"></i> DevOps &amp; Cloud
-      </h3>
-      <div class="grid-2col">
-        <div class="card"><i class="fab fa-docker card-icon"></i><h3>Docker</h3><p>Containerization, Docker Compose, Multi-stage Builds</p></div>
-        <div class="card"><i class="fab fa-aws card-icon"></i><h3>AWS</h3><p>EC2, S3, Lambda, RDS, API Gateway, CloudFormation</p></div>
-        <div class="card"><i class="fas fa-code-branch card-icon"></i><h3>CI/CD</h3><p>GitHub Actions, GitLab CI, Automated Testing, Deployment</p></div>
-        <div class="card"><i class="fas fa-server card-icon"></i><h3>Deployment</h3><p>Vercel, Render, Heroku, Nginx, Gunicorn</p></div>
-      </div>
+            <div class="stack-card" data-aos="zoom-in">
 
-      <h3 style="margin-top:2rem;margin-bottom:1rem;color:#d4c8e0;">
-        <i class="fas fa-brain" style="color:#8b6fa0;margin-right:8px;"></i> Data &amp; AI
-      </h3>
-      <div class="grid-2col">
-        <div class="card"><i class="fas fa-database card-icon"></i><h3>PostgreSQL</h3><p>Complex Queries, Indexing, Stored Procedures, PgBouncer</p></div>
-        <div class="card"><i class="fas fa-memory card-icon"></i><h3>Redis</h3><p>Caching, Session Management, Pub/Sub, Rate Limiting</p></div>
-        <div class="card"><i class="fas fa-eye card-icon"></i><h3>OpenCV</h3><p>Computer Vision, Image Processing, Object Detection</p></div>
-        <div class="card"><i class="fas fa-cloud-upload-alt card-icon"></i><h3>HuggingFace</h3><p>Transformers, Pre-trained Models, Model Fine-tuning</p></div>
-      </div>
-    </section>
+                <h3>Backend</h3>
 
-    <!-- ===== CERTIFICATIONS ===== -->
-    <section class="section" id="certifications">
-      <h2><i class="fas fa-cert
+                <div class="stack-tags">
+
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>Flask</span>
+                    <span>Django</span>
+                    <span>REST APIs</span>
+                    <span>SQLAlchemy</span>
+                    <span>Pydantic</span>
+
+                </div>
+
+            </div>
+
+            <!-- AI -->
+
+            <div class="stack-card" data-aos="zoom-in">
+
+                <h3>Artificial Intelligence</h3>
+
+                <div class="stack-tags">
+
+                    <span>LangChain</span>
+                    <span>LangGraph</span>
+                    <span>OpenAI</span>
+                    <span>Gemini</span>
+                    <span>RAG</span>
+                    <span>Prompt Engineering</span>
+                    <span>Embeddings</span>
+
+                </div>
+
+            </div>
+
+            <!-- Database -->
+
+            <div class="stack-card" data-aos="zoom-in">
+
+                <h3>Database</h3>
+
+                <div class="stack-tags">
+
+                    <span>PostgreSQL</span>
+                    <span>MySQL</span>
+                    <span>Redis</span>
+                    <span>MongoDB</span>
+                    <span>Alembic</span>
+
+                </div>
+
+            </div>
+
+            <!-- Cloud -->
+
+            <div class="stack-card" data-aos="zoom-in">
+
+                <h3>Cloud & DevOps</h3>
+
+                <div class="stack-tags">
+
+                    <span>Docker</span>
+                    <span>AWS</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>GitHub Actions</span>
+                    <span>Linux</span>
+
+                </div>
+
+            </div>
+
+            <!-- Frontend -->
+
+            <div class="stack-card" data-aos="zoom-in">
+
+                <h3>Frontend</h3>
+
+                <div class="stack-tags">
+
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+
+                </div>
+
+            </div>
+
+            <!-- Currently Learning -->
+
+            <div class="stack-card featured" data-aos="zoom-in">
+
+                <h3>Currently Building</h3>
+
+                <div class="stack-tags">
+
+                    <span>Swift Pay</span>
+                    <span>Payment Gateway</span>
+                    <span>Microservices</span>
+                    <span>AI Agents</span>
+                    <span>Workflow Automation</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================= -->
+<!-- EXPERIENCE -->
+<!-- ========================================= -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+            <span>EXPERIENCE</span>
+            <h2>Professional Journey</h2>
+        </div>
+
+        <div class="timeline">
+
+            <!-- Accepto -->
+
+            <div class="timeline-item" data-aos="fade-right">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span class="timeline-date">
+                        May 2025 – Present
+                    </span>
+
+                    <h3>Python Developer</h3>
+
+                    <h4>Accepto Technologies</h4>
+
+                    <p>
+
+                        Building production-ready backend systems,
+                        AI-powered automation,
+                        REST APIs,
+                        FastAPI services,
+                        PostgreSQL databases,
+                        authentication systems,
+                        workflow automation
+                        and scalable backend architectures.
+
+                    </p>
+
+                    <ul>
+
+                        <li>FastAPI Backend Development</li>
+
+                        <li>REST API Design</li>
+
+                        <li>AI Integrations</li>
+
+                        <li>Automation Workflows</li>
+
+                        <li>Database Design</li>
+
+                        <li>JWT Authentication</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Overseas -->
+
+            <div class="timeline-item" data-aos="fade-left">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span class="timeline-date">
+                        Jun 2024 – Mar 2025
+                    </span>
+
+                    <h3>Field Engineer</h3>
+
+                    <h4>Overseas Engineering Pvt. Ltd.</h4>
+
+                    <p>
+
+                        Worked on industrial engineering,
+                        project execution,
+                        technical documentation,
+                        field operations,
+                        quality assurance
+                        and client coordination.
+
+                    </p>
+
+                    <ul>
+
+                        <li>Technical Operations</li>
+
+                        <li>Engineering Documentation</li>
+
+                        <li>Quality Assurance</li>
+
+                        <li>Industrial Projects</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- PROJECTS -->
+<!-- ========================================= -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title" data-aos="fade-up">
+
+<span>PROJECTS</span>
+
+<h2>Featured Work</h2>
+
+<p>
+
+Recent backend, AI and automation projects.
+
+</p>
+
+</div>
+
+<div class="projects-grid">
+
+<!-- Swift Pay -->
+
+<div class="project-card featured"
+
+data-aos="zoom-in">
+
+<div class="project-top">
+
+<span class="status active">
+
+ACTIVE
+
+</span>
+
+</div>
+
+<h3>
+
+Swift Pay
+
+</h3>
+
+<p>
+
+Modern payment gateway platform inspired by
+enterprise payment providers.
+
+Designed using FastAPI,
+PostgreSQL,
+Alembic,
+JWT,
+Docker,
+merchant onboarding,
+payment APIs
+and scalable backend architecture.
+
+</p>
+
+<div class="project-stack">
+
+<span>FastAPI</span>
+
+<span>PostgreSQL</span>
+
+<span>Docker</span>
+
+<span>JWT</span>
+
+<span>Alembic</span>
+
+<span>Python</span>
+
+</div>
+
+<div class="project-links">
+
+<a
+href="https://github.com/dipayan3203/Swift-Pay"
+target="_blank">
+
+GitHub
+
+</a>
+
+<a href="#">
+
+Documentation
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Image Analyzer -->
+
+<div class="project-card"
+
+data-aos="zoom-in"
+
+data-aos-delay="100">
+
+<div class="project-top">
+
+<span class="status">
+
+AI
+
+</span>
+
+</div>
+
+<h3>
+
+Image Analyzer
+
+</h3>
+
+<p>
+
+AI-powered image analysis application
+using Gemini,
+FastAPI
+and modern REST APIs.
+
+Supports intelligent image understanding,
+descriptions
+and metadata generation.
+
+</p>
+
+<div class="project-stack">
+
+<span>Gemini</span>
+
+<span>FastAPI</span>
+
+<span>Python</span>
+
+<span>REST API</span>
+
+</div>
+
+<div class="project-links">
+
+<a
+href="https://github.com/dipayan3203/Image-Analyzer"
+target="_blank">
+
+GitHub
+
+</a>
+
+<a href="#">
+
+Live Demo
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Trackify -->
+
+<div class="project-card"
+
+data-aos="zoom-in"
+
+data-aos-delay="200">
+
+<div class="project-top">
+
+<span class="status">
+
+Backend
+
+</span>
+
+</div>
+
+<h3>
+
+Trackify
+
+</h3>
+
+<p>
+
+Backend application featuring
+authentication,
+database integration,
+deployment workflow,
+API development
+and modern backend architecture.
+
+</p>
+
+<div class="project-stack">
+
+<span>Python</span>
+
+<span>PostgreSQL</span>
+
+<span>Authentication</span>
+
+<span>API</span>
+
+</div>
+
+<div class="project-links">
+
+<a
+href="https://github.com/dipayan3203/trackify"
+target="_blank">
+
+GitHub
+
+</a>
+
+<a href="#">
+
+Live Demo
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Dynamic GitHub Projects -->
+
+<div class="github-section"
+
+data-aos="fade-up">
+
+<h3>
+
+Latest GitHub Repositories
+
+</h3>
+
+<p>
+
+Automatically loaded using the GitHub API.
+
+</p>
+
+<div id="github-projects">
+
+<div class="loading">
+
+Loading repositories...
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================================= -->
+<!-- EDUCATION -->
+<!-- ========================================= -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+
+            <span>EDUCATION</span>
+
+            <h2>Education & Certifications</h2>
+
+        </div>
+
+        <div class="education-grid">
+
+            <div class="education-card" data-aos="fade-right">
+
+                <i class="fas fa-graduation-cap"></i>
+
+                <h3>Bachelor of Technology</h3>
+
+                <h4>National Institute of Technology (NIT) Durgapur</h4>
+
+                <p>
+                    Engineering graduate with a strong foundation in software
+                    development, problem solving, algorithms, databases,
+                    backend engineering and applied artificial intelligence.
+                </p>
+
+            </div>
+
+            <div class="education-card" data-aos="fade-left">
+
+                <i class="fas fa-award"></i>
+
+                <h3>Professional Focus</h3>
+
+                <ul>
+
+                    <li>Python Development</li>
+                    <li>FastAPI</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Backend Engineering</li>
+                    <li>REST APIs</li>
+                    <li>PostgreSQL</li>
+                    <li>Docker</li>
+                    <li>Cloud Deployment</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- CONTACT -->
+<!-- ========================================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+
+            <span>CONTACT</span>
+
+            <h2>Let's Build Something Great</h2>
+
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-info" data-aos="fade-right">
+
+                <h3>Get In Touch</h3>
+
+                <p>
+
+                    I'm always interested in discussing backend engineering,
+                    AI systems, automation, or exciting software projects.
+
+                </p>
+
+                <div class="contact-item">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <span>your-email@example.com</span>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fab fa-github"></i>
+
+                    <a href="https://github.com/dipayan3203"
+                       target="_blank">
+
+                        github.com/dipayan3203
+
+                    </a>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fab fa-linkedin"></i>
+
+                    <a href="#">
+
+                        LinkedIn Profile
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Replace YOUR_FORM_ID with your Formspree ID -->
+            <form class="contact-form"
+                  action="https://formspree.io/f/YOUR_FORM_ID"
+                  method="POST"
+                  data-aos="fade-left">
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required>
+
+                <textarea
+                    name="message"
+                    rows="7"
+                    placeholder="Write your message..."
+                    required></textarea>
+
+                <button
+                    type="submit"
+                    class="btn primary">
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <h3>Dipayan Mahato</h3>
+
+            <p>
+
+                Python Developer • Applied AI Engineer
+
+            </p>
+
+            <div class="footer-social">
+
+                <a href="https://github.com/dipayan3203"
+                   target="_blank">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-linkedin"></i>
+
+                </a>
+
+                <a href="mailto:your-email@example.com">
+
+                    <i class="fas fa-envelope"></i>
+
+                </a>
+
+            </div>
+
+            <p class="copyright">
+
+                © 2026 Dipayan Mahato.
+                Built with HTML, CSS & JavaScript.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<button id="scrollTop">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+<!-- Scripts -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
+<script src="js/particles.js"></script>
+
+<script src="js/github.js"></script>
+
+<script src="js/app.js"></script>
+
+</main>
+
+</body>
+
+</html>
