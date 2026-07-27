@@ -1884,6 +1884,21 @@ header{
     align-self:flex-start;
 
 }
+.contact-item a{
+
+    color: var(--text-color);
+
+    text-decoration: none;
+
+    transition: color .3s ease;
+
+}
+
+.contact-item a:hover{
+
+    color: var(--primary);
+
+}
 
 /* =====================================================
    FOOTER
